@@ -60,47 +60,52 @@
 #           }
 #       end
 #   end
-
+#    # @intervention.save!
+           
+#         # if(@intervention.column_id == "" && @intervention.elevator_id == "")then
+#         #   @intervention.battery_id = params['batteryId']
+#         # end
 #      #create and Saving informations that are inside table intervention
 #     def create
         
 #         puts params
-#         @current_user_id = current_user.id 
+#         # @current_user_id = current_user.id 
 #         @intervention = Intervention.new 
         
-#         @intervention.author_id = @current_user_id,
+#         @intervention.author_id = current_user.id,
 #         @intervention.customer_id = params[:customer],
 #         @intervention.building_id = params[:building],
+
 #         @intervention.battery_id = params[:battery],
 #         @intervention.column_id = params[:column],
 #         @intervention.elevator_id = params[:elevator],
 #         @intervention.employee_id = params[:employee],
 #         @intervention.report = params[:report]
-#         # @intervention.save!
+        
 
 #         if @intervention.save
 #             flash[:notice] = "intervention successfull saved "
 #             redirect_to '/admin/interventions'
 #             else
 #             flash[:notice] = "intervention not saved "
-#             redirect_to 'interventions'
+#             redirect_to '/interventions'
 #             end
             
-#         if params[:column] == "None"
-#             params[:column] = nil
-#         end
+#         # if params[:column] == "None"
+#         #     params[:column] = nil
+#         # end
 
-#         if params[:elevator] == "None"
-#             params[:elevator] = nil
-#         end
+#         # if params[:elevator] == "None"
+#         #     params[:elevator] = nil
+#         # end
         
-#         if params[:employee] == "None"
-#             params[:employee] = nil
-#         end
+#         # if params[:employee] == "None"
+#         #     params[:employee] = nil
+#         # end
 
-#         if params[:employee] == "None"
-#             params[:employee] = nil
-#         end
+#         # if params[:employee] == "None"
+#         #     params[:employee] = nil
+#         # end
     
         
 #         if params[:elevator] != "None"
@@ -111,10 +116,7 @@
 #         elsif params[:column] != "None"
 #             # @intervention.battery_id = nil
 #         end  
-        
-      
-            
-       
+          
                       
 #     end
 

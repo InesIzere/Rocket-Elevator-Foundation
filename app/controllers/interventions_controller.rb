@@ -1,5 +1,5 @@
 class InterventionsController < ApplicationController
-    
+    # require 'zendesk_api' 
     
     def building
         if params[:customer].present?
@@ -84,15 +84,16 @@ class InterventionsController < ApplicationController
      
        
          
-        if params[:elevator] != "None"
-            params[:column] = nil 
-            # params[:battery] = nil
-            # @intervention.column_id = nil
-            # @intervention.battery_id = nil
-        elsif params[:column] != "None"
-            # @intervention.battery_id = nil
-        end  
-       
+        # if params[:elevator] != "None"
+        #     params[:column] = nil 
+        #     # params[:battery] = nil
+        #     # @intervention.column_id = nil
+        #     # @intervention.battery_id = nil
+        # elsif params[:column] != "None"
+        #     # @intervention.battery_id = nil
+        # end  
+        
+        
         
        
          
@@ -102,10 +103,10 @@ class InterventionsController < ApplicationController
            
         #   end
     
-         @intervention = Intervention.new 
-            @intervention = Intervention.create(
+        #  @intervention = Intervention.new 
+            @intervention = Intervention.new({
                
-                author_id: @current_user_id,
+                author_id: current_user.id,
                 customer_id: params[:customer],
                 building_id: params[:building],
                 battery_id: params[:battery],
@@ -113,21 +114,59 @@ class InterventionsController < ApplicationController
                 elevator_id: params[:elevator],
                 employee_id: params[:employee],
                 report: params[:report]
-            )
+
+               
+            })
+
+
             
             # @intervention.save!
               
               if @intervention.save
+                # create_intervention_ticket()
                 flash[:notice] = "intervention successfull saved "
-                redirect_to '/admin/interventions'
+                # redirect_to '/admin/interventions'
+                redirect_to root_path
               else
                 flash[:notice] = "intervention not saved "
-                redirect_to '/admin/interventions'
+                redirect_to '/interventions'
+                # redirect_to root_path
                
               end
            
 
     end
+    # def create_intervention_ticket
+    #     client = ZendeskAPI::Client.new do |config|
+    #         config.url = ENV['ZENDESK_URL']
+    #         config.username = ENV['ZENDESK_USERNAME']
+    #         config.token = ENV['ZENDESK_TOKEN']
+    #     end
+        
+    #     ZendeskAPI::Ticket.create!(client, 
+    #         :subject => "Intervention is required at #{@intervention.building_id} ", 
+    #         :comment => { 
+    #             :value => "Please Note That:
+    #             The Customer: #{@intervention.customer.company_name}\n, 
+    #              whose Building ID: #{@intervention.building_id}\n
+    #             whith Battery ID: #{@intervention.battery_id}\n
+    #             , Column ID: #{@intervention.column_id}\n
+    #             and  Elevator ID:#{@intervention.elevator_id}\n
+    #            need intervention asap. Employee: #{@intervention.employee.first_name} #{@intervention.employee.last_name}\n
+    #             is required to go there. Here are more datils Description: #{@intervention.report}"
+    #         }, 
+    #         :requester => { 
+    #             "name": '#{@intervention.employee.last_name}',
+    #             # "#{@intervention.current_user.first_name} #{@intervention.current_user.last_name}", 
+    #         },
+    #         :priority => "normal",
+    #         :type => "problem"
+    #     )
+    # end 
+
+
+
+
 
     
     def show
