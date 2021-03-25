@@ -1,5 +1,5 @@
 class InterventionsController < ApplicationController
-    # require 'zendesk_api' 
+    require 'zendesk_api' 
     
     def building
         if params[:customer].present?
@@ -68,10 +68,12 @@ class InterventionsController < ApplicationController
 
         if params[:column] == "None"
             params[:column] = nil
+            # params[:battery]=
         end
 
         if params[:elevator] == "None"
             params[:elevator] = nil
+            params[:battery] = nil
         end
          
         if params[:employee] == "None"
@@ -84,14 +86,14 @@ class InterventionsController < ApplicationController
      
        
          
-        # if params[:elevator] != "None"
-        #     params[:column] = nil 
-        #     # params[:battery] = nil
+        if params[:elevator] != "None"
+            params[:column] = nil 
+            params[:battery] = nil
         #     # @intervention.column_id = nil
         #     # @intervention.battery_id = nil
         # elsif params[:column] != "None"
         #     # @intervention.battery_id = nil
-        # end  
+        end  
         
         
         
@@ -123,7 +125,7 @@ class InterventionsController < ApplicationController
             # @intervention.save!
               
               if @intervention.save
-                # create_intervention_ticket()
+                create_intervention_ticket()
                 flash[:notice] = "intervention successfull saved "
                 # redirect_to '/admin/interventions'
                 redirect_to root_path
@@ -136,33 +138,34 @@ class InterventionsController < ApplicationController
            
 
     end
-    # def create_intervention_ticket
-    #     client = ZendeskAPI::Client.new do |config|
-    #         config.url = ENV['ZENDESK_URL']
-    #         config.username = ENV['ZENDESK_USERNAME']
-    #         config.token = ENV['ZENDESK_TOKEN']
-    #     end
-        
-    #     ZendeskAPI::Ticket.create!(client, 
-    #         :subject => "Intervention is required at #{@intervention.building_id} ", 
-    #         :comment => { 
-    #             :value => "Please Note That:
-    #             The Customer: #{@intervention.customer.company_name}\n, 
-    #              whose Building ID: #{@intervention.building_id}\n
-    #             whith Battery ID: #{@intervention.battery_id}\n
-    #             , Column ID: #{@intervention.column_id}\n
-    #             and  Elevator ID:#{@intervention.elevator_id}\n
-    #            need intervention asap. Employee: #{@intervention.employee.first_name} #{@intervention.employee.last_name}\n
-    #             is required to go there. Here are more datils Description: #{@intervention.report}"
-    #         }, 
-    #         :requester => { 
-    #             "name": '#{@intervention.employee.last_name}',
-    #             # "#{@intervention.current_user.first_name} #{@intervention.current_user.last_name}", 
-    #         },
-    #         :priority => "normal",
-    #         :type => "problem"
-    #     )
-    # end 
+    def create_intervention_ticket
+            client = ZendeskAPI::Client.new do |config|
+                config.url = ENV['ZENDESK_URL']
+                config.username = ENV['ZENDESK_USERNAME']
+                config.token = ENV['ZENDESK_TOKEN']
+            end
+            
+            ZendeskAPI::Ticket.create!(client, 
+                :subject => "Intervention is required at #{@intervention.building_id} ", 
+                :comment => { 
+                    :value => "Please Note That:
+                    The Customer: #{@intervention.customer.company_name}\n, 
+                     whose Building ID: #{@intervention.building_id}\n
+                    whith Battery ID: #{@intervention.battery_id}\n
+                    , Column ID: #{@intervention.column_id}\n
+                    and  Elevator ID:#{@intervention.elevator_id}\n
+                   need intervention asap. Employee: #{@intervention.employee_id}\n
+                    is required to go there. Here are more datils Description: #{@intervention.report}"
+                }, 
+                :requester => { 
+                    # "name": @intervention.current_user.first_name, 
+                    # "name": @intervention.employee.last_name,
+                    # "#{@intervention.current_user.first_name} #{@intervention.current_user.last_name}", 
+                },
+                :priority => "normal",
+                :type => "problem"
+            )
+        end 
 
 
 
