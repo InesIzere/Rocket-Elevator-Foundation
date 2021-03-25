@@ -1,0 +1,2 @@
+class FactQuote < DwhRecord
+end

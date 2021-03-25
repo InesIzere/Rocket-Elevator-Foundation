@@ -1,0 +1,15 @@
+
+<button type="submit" id="watson" class="btn btn-primary">Star Wars Facts</button>
+
+<audio id="audio">
+    <source src="<%= audio_path '/facts.mp3'%>">
+</audio>
+
+<script> 
+    $('#watson').on('click', ()=>{
+        var audio = $('#audio').get(0);
+        audio.paused? audio.play():audio.pause()
+        audio.paused? $('#watson').text('PLAY'):$('#watson').text('PAUSE')
+    })
+</script>
+

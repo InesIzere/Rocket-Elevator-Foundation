@@ -1,0 +1,585 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+en:
+  admin:
+    actions:
+      map:
+        menu: "Map"
+        title: "Map"
+        breadcrumb: "Map"
+      watson:
+        menu: "Watson"
+        title: "Watson"
+        breadcrumb: "Watson"
+      spotify:
+        menu: "Spotify"
+        title: "Spotify"
+        breadcrumb: "Spotify"  
+      starwars:
+        menu: "Star Wars "
+        title: "Star Wars Facts"
+        breadcrumb: "Star Wars" 
+  faker:
+    name:
+      battery_type:
+        - Corporate
+        - Residential
+        - Commercial
+        - Hybrid
+
+      status:
+        - Online
+        - Offline
+        
+      model:
+        - Premium
+        - Standard
+        - Excellium
+      
+      status_column:
+        - Active
+        - Intervention
+        - Inactive
+
+      status_elevator:
+        - Idle
+        - Stopped
+        - Moving
+      
+      department:
+        - Corporate Buildings
+        - Residential Buildings
+        - Sales
+        - Maintenance
+        - Administration
+        - General
+
+      building_address:
+
+        - 1745 T Street Southeast,	Washington
+        - 6007 Applegate Lane,	Louisville
+        - 560 Penstock Drive,	Grass Valley
+        - 150 Carter Street,	Manchester
+        - 2721 Lindsay Avenue,	Louisville
+        - 18 Densmore Drive,	Essex
+        - 637 Britannia Drive,	Vallejo
+        - 5601 West Crocus Drive,	Glendale
+        - 5403 Illinois Avenue,	Nashville
+        - 8821 West Myrtle Avenue,	Glendale
+        - 2203 7th Street Road,	Louisville
+        - 6463 Vrain Street,	Arvada
+        - 87 Horseshoe Drive,	West Windsor
+        - 60 Desousa Drive,	Manchester
+        - 4 Old Colony Way,	Yarmouth
+        - 314 South 17th Street,	Nashville
+        - 1649 Timberridge Court,	Fayetteville
+        - 5461 West Shades Valley Drive,	Montgomery
+        - 629 Debbie Drive,	Nashville
+        - 22572 Toreador Drive,	Salinas
+        - 3034 Mica Street,	Fayetteville
+        - 3729 East Mission Boulevard,	Fayetteville
+        - 5114 Greentree Drive,	Nashville
+        - 3466 Southview Avenue,	Montgomery
+        - 1513 Cathy Street,	Savannah
+        - 600 West 19th Avenue,	Anchorage
+        - 1208 Elkader Court North,	Nashville
+        - 210 Green Road,	Manchester
+        - 49548 Road 200,	O'Neals
+        - 81 Seaton Place Northwest,	Washington
+        - 1267 Martin Street,	Nashville
+        - 7431 Candace Way,	Louisville
+        - 1407 Walden Court,	Crofton
+        - 5906 Milton Avenue,	Deale
+        - 74 Springfield Street,	Agawam
+        - 2905 Stonebridge Court,	Norman
+        - 20930 Todd Valley Road,	Foresthill
+        - 5928 West Mauna Loa Lane,	Glendale
+        - 802 Madison Street Northwest,	Washington
+        - 2811 Battery Place Northwest,	Washington
+        - 210 Lacross Lane,	Westmore
+        - 2010 Rising Hill Drive,	Norman
+        - 388 East Main Street,	
+        - 450 Kinhawk Drive,	Nashville
+        - 131 Westerly Street,	Manchester
+        - 308 Woodleaf Court,	Glen Burnie
+        - 8502 Madrone Avenue,	Louisville
+        - 23 Sable Run Lane,	Methuen
+        - 716 Waller Road,	Brentwood
+        - 416 McIver Street,	Nashville
+        - 1508 Massachusetts Avenue Southeast,	Washington
+        - 5615 West Villa Maria Drive,	Glendale
+        - 3162 Martin Luther King Junior Boulevard,	Fayetteville
+        - 5306 Ritchie Highway,	Baltimore
+        - 109 Summit Street,	Burlington
+        - 816 West 19th Avenue,	Anchorage
+        - 172 Alburg Springs Road,	Alburgh
+        - 159 Downey Drive,	Manchester
+        - 125 John Street,	Santa Cruz
+        - 1101 Lotus Avenue,	Glen Burnie
+        - 8376 Albacore Drive,	Pasadena
+        - 491 Arabian Way,	Grand Junction
+        - 12245 West 71st Place,	Arvada
+        - 80 North East Street,	Holyoke
+        - 4695 East Huntsville Road,	Fayetteville
+        - 310 Timrod Road,	Manchester
+        - 1364 Capri Drive,	Panama City
+        - 132 Laurel Green Court,	Savannah
+        - 6657 West Rose Garden Lane,	Glendale
+        - 519 West 75th Avenue,	Anchorage
+        - 31353 Santa Elena Way,	Union City
+        - 8398 West Denton Lane,	Glendale
+        - 700 Winston Place,	Anchorage
+        - 232 Maine Avenue,	Panama City
+        - 1 Kempf Drive,	Easton
+        - 5811 Crossings Boulevard,	Nashville
+        - 5108 Franklin Street,	Savannah
+        - 913 Fallview Trail,	Nashville
+        - 270 Chrissy's Court,	
+        - 130 Old Route 103,	Chester
+        - 10826 Pointe Royal Drive,	Bakersfield
+        - 74 Ranch Drive,	Montgomery
+        - 6601 West Ocotillo Road,	Glendale
+        - 19416 Barclay Road,	Castro Valley
+        - 1347 Blackwalnut Court,	Annapolis
+        - 1770 Colony Way,	Fayetteville
+        - 165 Saint John Street,	Manchester
+        - 2409 Research Boulevard,	Fort Collins
+        - 1903 Bashford Manor Lane,	Louisville
+        - 8315 Surf Drive,	Panama City Beach
+        - 3301 Old Muldoon Road,	Anchorage
+        - 8800 Cordell Circle,	Anchorage
+        - 117 East Cook Avenue,	Anchorage
+        - 6231 North 67th Avenue,	Glendale
+        - 8505 Waters Avenue,	Savannah
+        - 7 Underwood Place Northwest,	Washington
+        - 21950 Arnold Center Road,	Carson
+        - 1427 South Carolina Avenue Southeast,	Washington
+        - 1420 Turtleback Trail,	Panama City
+        - 6990 Pierson Street,	Arvada
+        - 376 North Williams Drive,	Fayetteville
+        - 3617 Menlo Court,	Montgomery
+        - 711 Parker Street,	East Longmeadow
+        - 8521 Crystal Street,	Anchorage
+        - 1622 Edgar D Nixon Avenue,	Montgomery
+        - 1608 Gales Street Northeast,	Washington
+        - 122 East Hayes Street,	Norman
+        - 5144 Cattail Court,	Fayetteville
+        - 131 Kent Drive,	Manchester
+        - 2313 Vegas Avenue,	Castro Valley
+        - 5420 Sunset Avenue,	Panama City Beach
+        - 242 North Ash Street,	Fruita
+        - 38676 Greenwich Circle,	Fremont
+        - 2426 East Onyx Trail,	Fayetteville
+        - 110 Seaton Place Northwest,	Washington
+        - 5385 Iris Street,	Arvada
+        - 5628 West Tonopah Drive,	Glendale
+        - 65 Bay Drive,	Annapolis
+        - 7401 North 61st Drive,	Glendale
+        - 8 Watkins Road,	
+        - 2209 June Drive,	Nashville
+        - 1840 Nobel Place,	Louisville
+        - 2622 Martin Luther King Junior Boulevard,	Fayetteville
+        - 4 Glen Circle,	Glen Burnie
+        - 7529 West 72nd Avenue,	Arvada
+        - 10996 Largo Drive,	Savannah
+        - 2027 North Shannon Drive,	Fayetteville
+        - 154 Boca Lagoon Drive,	Panama City Beach
+        - 3311 Wiley Post Loop,	Anchorage
+        - 5055 West 58th Avenue,	Arvada
+        - 3228 Chettenham Drive,	Rancho Cordova
+        - 1901 North Midwest Boulevard,	Edmond
+        - 1536 North Main Street,	Salinas
+        - 33 Linscott Road,	Hingham
+        - 1732 27th Avenue,	Oakland
+        - 22 Gallatin Street Northeast,	Washington
+        - 8125 Glynnwood Drive,	Montgomery
+        - 2139 Glynnwood Drive,	Savannah
+        - 14 School Street,	Medway
+        - 264 Crest Drive,	Soldotna
+        - 307 Joel Street,	Pooler
+        - 188 River Road,	Essex
+        - 1643 Oxford Street,	Berkeley
+        - 5545 Saddlewood Lane,	Brentwood
+        - 26466 Mockingbird Lane,	Hayward
+        - 4840 Reservoir Road Northwest,	Washington
+        - 599 Cambridge Street,	Cambridge
+        - 584 Rural Hill Road,	Nashville
+        - 10262 West 59th Avenue,	Arvada
+        - 945 South 5th Street,	Louisville
+        - 2543 The Meadows,	Montgomery
+        - 153 Atlantic Avenue,	Salisbury
+        - 9 Brooklyn Street,	
+        - 5722 8th Street Northwest,	Washington
+        - 8700 Seaton Boulevard,	Montgomery
+        - 1004 Bellflower Street,	Livermore
+        - 4738 Mallard Common,	Fremont
+        - 875 Latouche Street,	Anchorage
+        - 4940 Fuller Road,	Montgomery
+        - 5754 Belleau Drive,	Montgomery
+        - 1403 Lincoln Street,	Savannah
+        - 140 South Hill Avenue,	Fayetteville
+        - 642 South 2nd Street,	Louisville
+        - 6473 Zephyr Street,	Arvada
+        - 4250 North Valley Lake Drive,	Fayetteville
+        - 565 North Lakeshore Drive,	Panama City Beach
+        - 5514 West Wedington Drive,	Fayetteville
+        - 1909 Wainwright Avenue,	Panama City
+        - 4525 West Frier Drive,	Glendale
+        - 201 West Montgomery Cross Road,	Savannah
+        - 915 Heath Drive,	Montgomery
+        - 95 Briarwood Drive,	Manchester
+        - 69 Washington Street,	Manchester
+        - 2900 North Western Avenue,	Edmond
+        - 7841 West Kristal Way,	Glendale
+        - 361 Parmley Lane,	Nashville
+        - 6120 Southeast 84th Street,	Oklahoma City
+        - 9428 North 65th Drive,	Glendale
+        - 11 Meeting Place Circle,	Boxford
+        - 4438 Maine Avenue,	Baldwin Park
+        - 65 Jones Lane,	Montevallo
+        - 3140 Commander Drive,	Louisville
+        - 107 Guaymas Place,	Davis
+        - 6114 West Glenn Drive,	Glendale
+        - 622 Thomas Street,	Woodland
+        - 127 Grand Heron Drive,	Panama City
+        - 3504 East 16th Avenue,	Anchorage
+        - 1230 Stafford Drive,	Montgomery
+        - 6007 Yarrow Street,	Arvada
+        - 632 Belmar Drive,	Edmond
+        - 1515 Chandlee Avenue,	Panama City
+        - 10632 Admiral Court,	Oklahoma City
+        - 11655 West 81st Avenue,	Arvada
+        - 3500 Blanchard Drive Southwest,	Washington
+        - 2755 Country Drive,	Fremont
+        - 1850 Berryhill Place,	Montgomery
+        - 58 North U.S.A Drive,	Fayetteville
+        - 8785 Ellis Court,	Arvada
+        - 1636 Briarview Court,	Severn
+        - 12 Knox Street,	Manchester
+        - 425 Middle Turnpike East,	Manchester
+        - 2017 North Hartford Drive,	Fayetteville
+        - 5900 Upland Road,	Brooklyn Park
+        - 9331 Edison Road,	Lithia
+        - 1810 Orchard Place,	Anchorage
+        - 145 Grau Drive,	Fremont
+        - 3959 Fairlands Drive,	Pleasanton
+        - 3613 East 18th Avenue,	Anchorage
+        - 1275 South Holland Drive,	Fayetteville
+        - 109 Cambridge Station Road,	Louisville
+        - 2107 Elfen Glen,	Van Buren
+        - 8522 Ingalls Circle,	Arvada
+        - 1809 Cedar Drive,	Severn
+        - 1376 Oakland Avenue,	Fayetteville
+        - 4306 Bylsma Circle,	Panama City
+        - 233 Buckland Hills Drive,	Manchester
+        - 7701 Southwest 104th Street,	Oklahoma City
+        - 14003 Crossbranch Court,	Louisville
+        - 19590 East Batavia Drive,	Aurora
+        - 6424 Simms Street,	Arvada
+        - 718 Dutchmans Court,	Nashville
+        - 8496 Isles Court,	Pasadena
+        - 100 East Joyce Boulevard,	Fayetteville
+        - 9036 Calico Court,	Hesperia
+        - 2723 East Joyce Boulevard,	Fayetteville
+        - 90 Via Verde,	San Lorenzo
+        - 1015 Castle Road,	Edmond
+        - 2787 West Blackstone Crossing,	Fayetteville
+        - 3555 Alamosa Drive,	Anchorage
+        - 6231 North 59th Avenue,	Glendale
+        - 311 South Panama Street,	Montgomery
+        - 3313 Daisy Trail,	Nashville
+        - 5436 Dorbrandt Street,	Anchorage
+        - 553 South Arlington Road,	Orange
+        - 615 Q Street Northwest,	Washington
+        - 457 Mountain Village Boulevard,	Mountain Village
+        - 144 Lauderdale Street,	Montgomery
+        - 2 Ambelwood Way,	Savannah
+        - 4113 Holiday Drive,	Panama City
+        - 2001 Van Hoose Drive,	Fayetteville
+        - 9457 Winfield Place,	Montgomery
+        - 1120 Mitchell Young Road,	Montgomery
+        - 12816 West 65th Way,	Arvada
+        - 10 Erick Road,	Mansfield
+        - 481 East Redbud Lane,	Fayetteville
+        - 320 Northwest 22nd Street,	Oklahoma City
+        - 33 South Hill Avenue,	Fayetteville
+        - 355 Gillette Road,	Nashville
+        - 151 Main Street,	Savannah
+        - 545 Tracey Drive,	Panama City
+        - 3 Southerberry Drive,	
+        - 736 Sicard Street Southeast,	Washington
+        - 6214 Herzog Street,	Oakland
+        - 1160 North College Avenue,	Fayetteville
+        - 5843 West McLellan Road,	Glendale
+        - 1452 55th Avenue,	Oakland
+        - 4255 Tanager Common,	Fremont
+        - 13426 West Rovey Avenue,	Litchfield Park
+        - 195 Nursery Street,	Springfield
+        - 126 Marjorie Lane,	Manchester
+        - 22 Charnock Street,	Beverly
+        - 817 25th Street Northwest,	Washington
+        - 2552 Massachusetts Avenue Northwest,	Washington
+        - 1711 Lore Road,	Anchorage
+        - 19091 Northeast 23rd Street,	Harrah
+        - 8318 North 57th Drive,	Glendale
+        - 7256 West 84th Way,	Arvada
+        - 706 Seagrove Road,	Glen Burnie
+        - 2318 Camryns Crossing,	Panama City
+        - 968 Virginia Avenue,	Olivehurst
+        - 416 South University Boulevard,	Norman
+        - 137 Gazebo East Drive,	Montgomery
+        - 10723 Colonial Woods Court,	Louisville
+        - 119 Matthew Lane,	Nashville
+        - 3142 West Finger Road,	Fayetteville
+        - 4 Elm Street,	Windsor
+        - 78 School Street,	Woburn
+        - 19020 North 68th Avenue,	Glendale
+        - 2849 Quail Drive,	Fayetteville
+        - 2456 22nd Avenue,	Greeley
+        - 200 Boulder Road,	Manchester
+        - 11150 Sun Valley Drive,	Oakland
+        - 505 Southeast 32nd Street,	Oklahoma City
+        - 1025 West 19th Street,	Panama City
+        - 6725 Pamela Court,	Montgomery
+        - 4714 Narrow Lane Road,	Montgomery
+        - 11 Proctor Circle,	Peabody
+        - 10508 Kovats Court,	Louisville
+        - 3179 18th Street Northwest,	Washington
+        - 3194 Bladensburg Road Northeast,	Washington
+        - 260 Rio Del Mar Boulevard,	Aptos
+        - 1040 West 27th Avenue,	Anchorage
+        - 42 Lake Lane,	Westmore
+        - 3718 Bay Tree Road,	Lynn Haven
+        - 3408 Bellisima Place,	Louisville
+        - 4109 General Bate Drive,	Nashville
+        - 5329 A Street,	Greeley
+        - 88 Shute Street,	Everett
+        - 480 Keene Road,	Walden
+        - 4 Cutting Avenue,	Worcester
+        - 275 South 40th Street,	Boulder
+        - 1189 Northwest End Avenue,	Fayetteville
+        - 25 Cliffside Drive,	Manchester
+        - 2515 60th Avenue,	Oakland
+        - 2057 Lucas Street,	Montgomery
+        - 386 Daniels Road,	New Haven
+        - 9805 Meadow Vale Drive,	Louisville
+        - 8 Village Circle,	Randolph
+        - 1011 San Jose Street,	San Leandro
+        - 2505 Walker Lane,	Nashville
+        - 11225 West 79th Drive,	Arvada
+        - 1907 18th Avenue South,	Nashville
+        - 16 Conway Street,	Shelburne Falls
+        - 20375 Wisteria Street,	Castro Valley
+        - 6408 Fern Crest Road,	Louisville
+        - 175 Creek Road,	Castleton
+        - 2531 Prestwick Avenue,	Concord
+        - 1002 Highland Avenue,	Louisville
+        - 2927 Leatherwood Drive,	Nashville
+        - 8467 Chase Drive,	Arvada
+        - 8556 Nelson Court,	Arvada
+        - 122 Summer Street,	Medford
+        - 12061 Johns Road,	Anchorage
+        - 8358 WB&A Road,	Severn
+        - 43 Henderson Avenue,	Savannah
+        - 347 Brewer Drive,	Nashville
+        - 2765 North Barcelona Avenue,	Fayetteville
+        - 5311 Chenoweth Park Lane,	Louisville
+        - 6398 Jellison Way,	Arvada
+        - 604 Northwest 118th Street,	Oklahoma City
+        - 37 Rushforde Drive,	Manchester
+        - 5434 West Beck Lane,	Glendale
+        - 1516 Ringe Drive,	Severn
+        - 3701 Lake Towne Drive,	Nashville
+        - 20250 North 67th Avenue,	Glendale
+        - 62 Prospect Avenue,	Quincy
+        - 25 Morton Street,	Quincy
+        - 8202 4 Winds Drive,	Lyndon
+        - 513 Habberton Road,	Fayetteville
+        - 1960 Sigfrid Court,	Annapolis
+        - 663 Chesapeake Way,	Fayetteville
+        - 3354 Wilmington Road,	Montgomery
+        - 8529 Old Harding Lane,	Nashville
+        - 22219 Panama City Beach Parkway,	Panama City Beach
+        - 37 East Broad Street,	Savannah
+        - 1309 Columbia Road Northwest,	Washington
+        - 1211 Castine Court,	Pasadena
+        - 906 West Berry Street,	Fayetteville
+        - 341 Oakland Street,	Manchester
+        - 60 Downey Drive,	Manchester
+        - 3770 North Front Street,	Fayetteville
+        - 25 Church Street,	Pittsfield
+        - 6578 Marauder Drive,	Nashville
+        - 2747 68th Avenue,	Oakland
+        - 95 Woods Hill Road,	
+        - 35 Keach Avenue,	Worcester
+        - 1822 North Grand Avenue,	Pueblo
+        - 1809 U.S. 80,	Savannah
+        - 5065 North 54th Avenue,	Glendale
+        - 1261 Steamboat Drive,	Fayetteville
+        - 1695 Archer Street,	Savannah
+        - 3904 October Woods Drive,	Nashville
+        - 1223 Delaware Avenue,	Deale
+        - 10383 Eagle River Lane,	Anchorage
+        - 1314 89th Avenue,	Oakland
+        - 21 Longview Bluff Drive East,	Savannah
+        - 1689 Fisher Pond Road,	Saint Albans City
+        - 9920 West 81st Avenue,	Arvada
+        - 2732 Rosedale Place,	Nashville
+        - 10881 Northforde Drive,	Cupertino
+        - 926 Mill Court,	Savannah
+        - 7550 Kline Drive,	Arvada
+        - 5688 Johnson Court,	Arvada
+        - 4439 Gale Street,	Livermore
+        - 6450 West Bethany Home Road,	Glendale
+        - 2931 Shady Oaks Drive,	Evans
+        - 6451 West Bell Road,	Glendale
+        - 644 West Maple Street,	Fayetteville
+        - 1219 North Storer Avenue,	Fayetteville
+        - 152 Holly Court,	Mountain View
+        - 6086 Kennedy Drive,	Fayetteville
+        - 2300 Deer Path Circle,	Hurstbourne Acres
+        - 802 East 37th Street,	Savannah
+        - 5821 Taft Street,	Arvada
+        - 188 Saint Matthews Avenue,	Louisville
+        - 68 Hampstead Place,	Athol
+        - 3164 West Woodfield Way,	Fayetteville
+        - 7998 Chase Circle,	Arvada
+        - 1797 Pasatiempo Drive,	Chico
+        - 3722 Kisling Loop,	Tyndall Air Force Base
+        - 429 Patterson Street,	Nashville
+        - 6140 Fenton Street,	Arvada
+        - 7404 West Crest Lane,	Glendale
+        - 7841 North 59th Lane,	Glendale
+        - 8043 Cranberry Street,	Anchorage
+        - 173 Spruce Street,	Manchester
+        - 4712 Cherokee Heights Road,	Panama City
+        - 915 Sacramento Street,	Bakersfield
+        - 317 Windsor Road,	Savannah
+        - 1332 Maple Street,	Montgomery
+        - 4709 Blagden Terrace Northwest,	Washington
+        - 5102 Ander Drive,	Brentwood
+        - 6754 Field Street,	Arvada
+        - 2347 Glen Eagle Drive,	Northfield
+        - 1613 Maple Timber Court,	Nashville
+        - 269 Park Street,	North Reading
+        - 6444 North 67th Avenue,	Glendale
+        - 11 Pine Point Road,	Duxbury
+        - 4136 East Virginia Lane,	Montgomery
+        - 5740 North 59th Avenue,	Glendale
+        - 95 Central Street,	Springfield
+        - 74 Heard Street,	Chelsea
+        - 2500 Snowdoun Chambers Road,	Montgomery
+        - 429 Dennison Ridge Drive,	Manchester
+        - 1208 Lindenwood Drive,	Panama City
+        - 7609 Doris Place,	Oklahoma City
+        - 1915 Southeast 29th Street,	Oklahoma City
+        - 212 Holiday Circle,	Savannah
+        - 32 Amsden Street,	Arlington
+        - 4016 Doane Street,	Fremont
+        - 8700 Lillington Circle,	Montgomery
+        - 7720 Allison Street,	Arvada
+        - 17878 Front Beach Road,	Panama City Beach
+        - 1328 Tuckerman Street Northwest,	Washington
+        - 4600 East Huntsville Road,	Fayetteville
+        - 5038 North Cimarron Drive,	Beverly Hills
+        - 1216 West Hill Street,	Louisville
+        - 3033 Aubert Avenue,	Louisville
+        - 17020 West 64th Drive,	Arvada
+        - 12420 West Montebello Avenue,	Litchfield Park
+        - 2538 East 40th Plaza,	Panama City
+        - 827 10th Street Northeast,	Washington
+        - 5912 North 48th Avenue,	Glendale
+        - 37 Fieldside Drive,	Groton
+        - 9176 Ellis Way,	Arvada
+        - 5370 Business Park Drive,	Montgomery
+        - 1612 Beech Street,	Louisville
+        - 8532 Ingalls Circle,	Arvada
+        - 7941 Alpine View Circle,	Anchorage
+        - 8595 West 81st Drive,	Arvada
+        - 4296 North Blossom Court,	Fayetteville
+        - 1738 Annabellas Drive,	Panama City Beach
+        - 3215 Madsen Street,	Hayward
+        - 4 Village Lake Drive,	Fayetteville
+        - 86 Russell Street,	Manchester
+        - 570 Broadway,	Lynnfield
+        - 1405 Monroe Street Northeast,	Washington
+        - 900 North Leverett Avenue,	Fayetteville
+        - 222 Quince Street,	San Diego
+        - 370 Wallace Road,	Nashville
+        - 6672 Urban Court,	Arvada
+        - 516 Southwest 60th Terrace,	Oklahoma City
+        - 1513 Southeast 9th Street,	Moore
+        - 154 Byrd Drive,	Panama City
+        - 1106 Homer Avenue,	Savannah
+        - 1010 M Street Northwest,	Washington
+        - 5420 Allison Street,	Arvada
+        - 20 Hacker Street,	Worcester
+        - 732 Kevin Court,	Oakland
+        - 509 Franklin Street Northeast,	Washington
+        - 23 Whitcomb Street,	Springfield
+        - 3377 Sandstone Court,	Pleasanton
+        - 14 Huntington Street,	Manchester
+        - 2802 US Highway 98,	Mexico Beach
+        - 412 Virginia Avenue,	Louisville
+        - 1644 New Jersey Avenue Northwest,	Washington
+        - 832 51st Street Northeast,	Washington
+        - 894 Windmill Park Lane,	Mountain View
+        - 9636 Morar Road,	Panama City
+        - 9472 Noble Way,	Arvada
+        - 618 Staley Avenue,	Hayward
+        - 8704 Bayberry Place,	Plantation
+        - 2506 West Madison Street,	Louisville
+        - 840 Inglewood Drive,	West Sacramento
+        - 10 Dalry Lane,	Savannah
+        - 3301 Nora Lane,	Louisville
+        - 8304 Glaser Lane,	Louisville
+        - 3720 West 86th Avenue,	Anchorage
+        - 3298 Chestnut Street Northwest,	Washington
+        - 82 Fairfield Street,	Manchester
+        - 3138 P Street Northwest,	Washington
+        - 80 Locust Avenue,	Worcester
+        - 2715 Thornbrook Court,	Odenton
+        - 3579 2nd Avenue,	Edgewater
+        - 6739 Taft Court,	Arvada
+        - 1528 Stafford Avenue,	Hayward
+        - 2024 Merrily Drive,	Montgomery
+        - 2034 Fairfax Road,	Annapolis
+        - 1430 East Audubon Road,	Montgomery
+        - 3652 East Blue Stone Drive,	Fayetteville
+        - 3302 Woodland Park Drive,	Anchorage
+        - 1771 Daisey Court,	Millersville
+        - 406 East Waldburg Street,	Savannah
+        - 11843 North 60th Avenue,	Glendale
+        - 9515 West 74th Avenue,	Arvada
+        - 119 Antioch Pike,	Nashville
+        - 1157 1st Street Northwest,	Washington
+        - 3578 Galindo Street,	Oakland
+        - 12800 Saunders Road,	Anchorage

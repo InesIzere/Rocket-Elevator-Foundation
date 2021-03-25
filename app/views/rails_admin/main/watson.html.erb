@@ -1,0 +1,14 @@
+<h1>Watson</h1>
+<button type="submit" id="watson" class="btn btn-primary">SUMMARY</button>
+
+<audio id="audio">
+    <source src="<%= audio_path '/speech.mp3'%>">
+</audio>
+
+<script> 
+    $('#watson').on('click', ()=>{
+        var audio = $('#audio').get(0);
+        audio.paused? audio.play():audio.pause()
+        audio.paused? $('#watson').text('PLAY'):$('#watson').text('PAUSE')
+    })
+</script>

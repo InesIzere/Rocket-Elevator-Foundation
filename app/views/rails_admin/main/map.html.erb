@@ -1,0 +1,87 @@
+<%= javascript_include_tag "http://maps.google.com/maps/api/js?#{ENV['GOOGLE_MAPS']}" %>
+<div id="map" style="width: 100%; height: 400px;"></div>
+
+<script type="text/javascript">
+    
+    var maps = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: new google.maps.LatLng(44.99, -98.5),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    locations = [];
+    floors = [];
+    names = [];
+    nb_batteries = [];
+    nb_columns = [];
+    nb_elevators = [];
+    tech_names = [];
+
+    <% Building.all.each do |building| %>
+        var f=0, x=0, y=0, z=0;
+        locations.push(<%= raw(building.address_building.to_json) %>);
+        names.push(<%= raw(building.customer.company_name.to_json) %>);
+        tech_names.push(<%= raw(building.customer.full_name_company_contact.to_json) %>);
+        x = x + <%= building.batteries.count %>;
+        <% building.batteries.all.each do |battery| %>
+            y = y + <%= battery.columns.count %>;
+            <% battery.columns.all.each do |column| %>
+                f = f + <%= column.number_of_floors_served %>;
+                z = z + <%= column.elevators.count %>;
+            <% end %>
+        <% end %>
+        floors.push(f);
+        nb_batteries.push(x);
+        nb_columns.push(y);
+        nb_elevators.push(z);
+    <% end %>
+
+    var geocoder = new google.maps.Geocoder();
+    var infowindow = new google.maps.InfoWindow();
+    var marker, i;
+    let selectLoc = locations.slice(10,20);
+    // console.log(selectLoc);
+
+    // console.log('First address Reference: ' + locations[0]);
+
+    for (let i = 0; i < 10; i++){
+        
+        geocoder.geocode({ address: locations[i] }, (results, status) => {
+            
+            // console.log('Addresses After Geocode: ' + locations[2]);
+            let lat = results[0].geometry.location.lat();
+            let lng = results[0].geometry.location.lng();
+            let weather = fetch('https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lng+'&main.temp&units=metric&appid=<%=ENV['OPEN_WEATHER_APIKEY']%>').then(function(resp){return resp.json()})
+            if (status === "OK") {
+                markerPost(results, lat, lng, i, weather)
+                    // console.log('Addresses After Geocode: ' + locations[i]);
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+            }
+        });
+    }
+
+    function markerPost(results, bruh, bruuh, nani, weather){
+        marker = new google.maps.Marker({
+            map: maps,
+            position: new google.maps.LatLng(bruh, bruuh)
+            });
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(
+                        '<b>' + locations[nani] + '</b>' 
+                + '<br>' + names[nani]
+                + '<br> <br>' + 'Floors: ' + floors[nani]
+                + '<br>' + 'Batteries: ' + nb_batteries[nani]
+                + '<br>' + 'Columns: ' + nb_columns[nani]
+                + '<br>' + 'Elevators: ' + nb_elevators[nani]
+                + '<br>' + 'Technical Contact: ' + tech_names[nani]
+                + '<br>' + 'Weather: ' + weather
+                );
+
+                infowindow.open(map, marker);
+                }
+        })(marker, i));
+    }
+
+</script>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CreationDate: 2021-02-24
+  CompanyName: MyString
+  FullNameCompanyContact: MyString
+  EmailCompanyContact: MyString
+  NbElevator: 1
+  CustomerCity: MyString
+
+two:
+  CreationDate: 2021-02-24
+  CompanyName: MyString
+  FullNameCompanyContact: MyString
+  EmailCompanyContact: MyString
+  NbElevator: 1
+  CustomerCity: MyString

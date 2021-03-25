@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  author_id: 
+  start_date: 2021-03-21
+  end_date: 2021-03-21
+  result: MyString
+  report: MyString
+  status: MyString
+
+two:
+  author_id: 
+  start_date: 2021-03-21
+  end_date: 2021-03-21
+  result: MyString
+  report: MyString
+  status: MyString

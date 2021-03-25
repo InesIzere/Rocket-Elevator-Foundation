@@ -1,0 +1,72 @@
+<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+        <!-- TOP NAV -->
+        <header id="topNav">
+            <div class="container">
+                <!-- Mobile Menu Button -->
+                <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Logo -->
+                <%= link_to image_tag('logo-transparent.png'), root_path, :alt => "Rocket Elevators logo", :class => "logo float-left scrollTo" %>
+                <!--<a class="logo float-left scrollTo" href="index.html" target="_self">
+                    <%= image_tag 'logo-transparent.png', alt: "Rocket Elevators logo" %>
+                    <img src="assets/images/logo-transparent.png" alt="Rocket Elevator logo" />
+                </a>-->
+                <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+                    <nav class="nav-main">
+                        <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                            <li class="active"><!-- HOME -->
+                                <%= link_to "HOME",root_path, :id => "home-nav" %>
+                                <!--<a id="home-nav" href="index.html" target="_self">
+                                    HOME
+                                </a>-->
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button class="nav nav-pills nav-main nav-onepage dropdown-toggle" type="button" id="services-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        SERVICES
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="services-nav">
+                                        <a id="services-nav" class="dropdown-item" href="index.html#services">Services</a>
+                                        <div class="dropdown-divider"></div>
+												<%= link_to "Corporate Buildings",pages_commercial_url, class: "dropdown-item" %>
+												<%= link_to "Residential Buildings",pages_residential_url, class: "dropdown-item" %>
+												<%= link_to "Request a Quote",pages_quote_url, class: "dropdown-item" %>
+                                    </div>
+                                  </div>
+                            </li>
+                            <li><!-- PORTFOLIO -->
+                                <%= link_to "PORTFOLIO",root_path(:anchor => "portfolio") %>
+                                <!--<a id="portfolio-nav" href="index.html#portfolio" target="_self">
+                                    PORTFOLIO
+                                </a>-->
+                            </li>
+                            <li><!-- NEWS -->
+                                <%= link_to "NEWS",root_path(:anchor => "news") %>
+                                <!--<a id="news-nav" href="index.html#news" target="_self">
+                                    NEWS
+                                </a>-->
+                            </li>
+                            <li><!-- CLIENTS -->
+                                <%= link_to "CLIENTS",root_path(:anchor => "clients") %>
+                                <!--<a id="clients-nav" href="index.html#clients" target="_self">
+                                    CLIENTS
+                                </a>-->
+                            </li>
+                            <li><!-- CONTACT -->
+                                <%= link_to "CONTACT",root_path(:anchor => "contact") %>
+                                <!--<a id="contact-nav" href="#contact">
+                                    CONTACT
+                                </a>-->
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- /Top Nav -->

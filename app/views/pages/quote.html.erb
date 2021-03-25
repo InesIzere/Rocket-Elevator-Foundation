@@ -1,0 +1,392 @@
+<!-- WRAPPER -->
+		<div id="wrapper">
+
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+        <!-- TOP NAV -->
+        <header id="topNav">
+            <div class="container">
+                <!-- Mobile Menu Button -->
+                <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Logo -->
+                <%= link_to image_tag('logo-transparent.png'), root_path, :alt => "Rocket Elevators logo", :class => "logo float-left scrollTo" %>
+                <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+                    <nav class="nav-main">
+                        <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                            <li class="active"><!-- HOME -->
+                                <%= link_to "HOME",root_path, :id => "home-nav" %>
+                            </li>
+                            <li>
+								<a id="service-nav" href="#services">SERVICES</a>    
+								<ul class="dropdown-menu">
+									<li><%= link_to "Services",root_path(:anchor => "services"), class: "dropdown-item" %></li>
+									<div class="dropdown-divider"></div>
+									<li><%= link_to "Corporate Buildings",pages_commercial_url, class: "dropdown-item" %></li>
+									<li><%= link_to "Residential Buildings",pages_residential_url, class: "dropdown-item" %></li>
+									<li><%= link_to "Request a Quote",pages_quote_url, class: "dropdown-item" %></li>
+								</ul>    
+							</li>
+                            <li><!-- PORTFOLIO -->
+                                <%= link_to "PORTFOLIO",root_path(:anchor => "portfolio") %>
+                            </li>
+                            <li><!-- NEWS -->
+                                <%= link_to "NEWS",root_path(:anchor => "news") %>
+                            </li>
+                            <li><!-- CLIENTS -->
+                                <%= link_to "CLIENTS",root_path(:anchor => "clients") %>
+                            </li>
+                            <li><!-- CONTACT -->
+                                <%= link_to "CONTACT",root_path(:anchor => "contact") %>
+                            </li>
+                            <% if user_signed_in? && current_user.supervisor_role? %>
+								<li><!-- LOGOUT -->
+									<%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+								</li>
+								<li><!-- ADMIN -->
+									<%= link_to "ADMIN", rails_admin_url %>
+								</li>
+							<% elsif user_signed_in? %>
+								<li><!-- LOGOUT -->
+									<%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+								</li>
+							<% else %>
+								<li><!-- LOGIN -->
+									<%= link_to "LOGIN", new_user_session_path %>
+								</li>
+							<% end %>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- /Top Nav -->
+			</div>
+
+
+			<!-- INTRO -->
+			<div class="slider fullwidthbanner-container roundedcorners">
+				<div id="home" class="fullwidthbanner" data-delay="0" data-height="600" data-shadow="0" data-navigationStyle="preview2">
+					<ul class="hide">
+						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off"  data-title="Our Values">
+							<!-- MAIN IMAGE -->
+							<img src="/assets/calculating-cost.jpg"  alt="cover image"  data-bgposition="center" data-bgfit="cover" data-bgrepeat="no-repeat">
+						</li>
+					</ul>
+				</div>
+			</div>
+            <hr class="m-0" /><!-- 1px line separator -->
+            
+			<button class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
+				<span class="font-lato fs-30">
+                    <strong>Request a Quote for your Elevator Project</strong>
+				</span>
+			</button>
+            <!-- INTRO -->
+
+
+            <!-- QUOTE -->
+            <section id="quote_data">
+                <div class="container">
+                    <div id="steps-to-quote" class="heading-title heading-dotted text-center">
+						<h2>Steps to a Quote Request</h2>
+                    </div>
+                    <div id="quote-results"class="heading-title heading-dotted text-center quote-results">
+                        <h2>Results of Quote Request</h2>
+                    </div>
+                    <div id="step1-intro">
+                        <p>
+                            Resquesting a quote for your project at Rocket Elevators is a very simple three steps process. First, we ask 
+                            you to specify the type of building for which you need elevators to be installed. You have four possibilities: 
+                            (1) Residential building, (2) Commercial building, (3) Corporate building or (4) Hybrid building, and can make 
+                            only one selection per project. Depending on your selection, a short series of questions will appear 
+                            for you to give us the information we need to generate the quote, such as the number of floors in the building, etc. 
+                            The second steps consists in answering those short questions. Finally, you will be asked to select one of our
+                            product lines. Just click on the button that will appear at the bottom once you are done and the quote will 
+                            appear within seconds.
+                        </p>
+                    </div>
+                </div>
+
+                <%# <div class="container" > %>
+                    <form id= "quote" class="form-horizontal" action="/quotes" method="post">
+                    <div class="container" >
+                         <div class="row" >
+                            <div class="col-lg-6 col-sm-12 row">
+                                <!-- STEP 1 BUILDING TYPE -->
+                                <div class="row">
+                                    <div id="step1" class="col-lg-2 col-sm-6">
+                                        <p>
+                                            <strong>STEP 1:</strong>
+                                        </p>
+                                    </div>
+                                    <div id="step1-options" class="col-lg-8">
+                                        <div id="building-type-input" class="form-group">
+                                            <label for="building-type">Please specify your project's building type</label>
+                                            <select id="building-type" class="form-control pointer" name="building_type" >
+                                                <option id="select" value="select" >--- Select ---</option>
+                                                <option id="residential" value="residential">Residential</option>
+                                                <option id="commercial" value="commercial">Commercial</option>
+                                                <option id="corporate" value="corporate">Corporate</option>
+                                                <option id="hybrid" value="hybrid">Hybrid</option>
+                                            </select>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <!-- STEP 2 DATA COLLECTION -->
+                                <div class="row">
+                                    <div id="step2" class="col-lg-2 col-sm-4">
+                                        <p>
+                                            <strong>STEP 2:</strong>
+                                        </p>
+                                    </div>
+                                    <div id="step2" class="col-lg-10 residential commercial corporate hybrid">
+                                        <p id="step2-intro">
+                                            Here are the questions we need you to answer to determine the number of elevators required for your project, 
+                                            based on its building type. Please fill all the fields.
+                                        </p>
+                                        <div id="number-of-apartments" class="form-group residential">
+                                            <label for="apartment_qty" class="control-label col-lg-9 col-sm-9">Number of apartments in the building</label>
+                                            <div class="col-lg-3">
+                                                <input type="number" id="apartment_qty" value="" min ="0" class="form-control" name="number_of_apartments" placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div id="number-of-companies" class="form-group commercial hybrid">
+                                            <label for="companies_qty" class="control-label col-lg-9 col-sm-9">Number of distinct businesses in the building</label>
+                                            <div class="col-lg-3">
+                                                <input type="number" id="companies_qty" value="" min ="0" class="form-control" name="number_of_companies" placeholder="0">
+                                            </div>                                
+                                        </div>
+                                        <div id="number-of-corporations" class="form-group corporate">
+                                            <label for="corporations_qty" class="control-label col-lg-9 col-sm-9">Number of separate tenant companies</label>
+                                            <div class="col-lg-3">
+                                                <input type="number" id="corporations_qty" value="" min ="0" class="form-control" name="number_of_corporations" placeholder="0">
+                                            </div>                                
+                                        </div>
+                                        <div id="number-of-floors" class="form-group residential commercial corporate hybrid">
+                                            <label for="floor_qty" class="control-label col-lg-9 col-sm-9">Number of floors in the building</label>
+                                            <div class="col-lg-3">
+                                                <input type="number" id="floor_qty" value="" min ="0" class="form-control" name="number_of_floors" placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div id="number-of-basements" class="form-group residential commercial corporate hybrid">
+                                            <label for="basement_qty" class="control-label col-lg-9 col-sm-9">Number of basements in the building</label>
+                                            <div class="col-lg-3">
+                                                <input type="number" id="basement_qty" value="" min ="0" class="form-control" name="number_of_basements" placeholder="0">
+                                            </div>  
+                                        </div>
+                                        <div id="number-of-parking-spots" class="form-group commercial corporate hybrid">
+                                            <label for="parking_qty" class="control-label col-lg-9 col-sm-9">Number of parking spaces available</label>
+                                            <div class="col-lg-3">
+                                                <input type="number" id="parking_qty" value="" min ="0" class="form-control" name="number_of_parking_spots" placeholder="0">
+                                            </div>                                
+                                        </div>
+                                        <div id="maximum-occupancy" class="form-group corporate hybrid">
+                                            <label for="occupancy_per_floor" class="control-label col-lg-9 col-sm-9">Maximum number of occupants per floor</label>
+                                            <div class="col-lg-3">
+                                                <input type="number" id="occupancy_per_floor" value="" min ="0"  class="form-control" name="maximum_occupancy" placeholder="0">
+                                            </div>                                
+                                        </div>
+                                        <div id="business-hours" class="form-group hybrid">
+                                            <label for="daily_business_hours" class="control-label col-lg-9 col-sm-9">Number of daily business activity hours in the building</label>
+                                            <div class="col-lg-3">
+                                                <input type="number" id="daily_business_hours" value="" min ="0" class="form-control" name="daily_business_hours" placeholder="0">
+                                            </div>                                
+                                        </div>
+                                        <div id="number-of-elevators" class="form-group commercial">
+                                            <label for="elevator_qty" class="control-label col-lg-9 col-sm-9">Number of elevator cages to be deployed</label>
+                                            <div class="col-lg-3">
+                                                <input type="number" id="elevator_qty" value="" min ="0" class="form-control" name="number_of_elevators" placeholder="0">
+                                            </div>                                
+                                        </div>
+                                        <div id="elevator-calc-button" class="row residential commercial corporate hybrid">
+                                            <div class="col-lg-10 mt-15">
+                                                <button id="calculate-elevators-needed" type="button" class="btn btn-primary">CALCULATE ELEVATORS NEEDED</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- STEP 3 PRODUCT LINE SELECTION --> 
+                                <div id="step3-row-1" class="row">
+                                    <div id="step3-intro" class="product-line hybrid col-lg-12 col-sm-12 text-align">
+                                        <p id="text-elevators-needed" class="product-line">
+                                            <!-- Filled after calculating the number of elevators required for the project  -->
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="step3-row-2" class="row">
+                                    <div id="step3-label" class="product-line col-lg-2 col-sm-4">
+                                        <p>
+                                            <strong>STEP 3:</strong>
+                                        </p>
+                                    </div>
+                                    <div id="step3" class="col-lg-10 residential commercial corporate hybrid">
+                                        <p class="product-line">
+                                            As a final step, please select one of our product lines.
+                                        </p>
+                                    </div>
+                                    <div id="step3-options-1" class="product-line col-lg-3 text-center">
+                                        <label for="standard">Standard  </label>
+                                        <input type="radio" id="standard" name="product_line" value="standard">
+                                    </div>
+                                    <div id="step3-options-2" class="product-line col-lg-3 text-center">
+                                        <label for="premium">Premium  </label>
+                                        <input type="radio" id="premium" name="product_line" value="premium">
+                                    </div>
+                                    <div id="step3-options-3" class="product-line col-lg-3 text-center">
+                                        <label for="excelium">Excelium  </label> 
+                                        <input type="radio" id="excelium" name="product_line" value="excelium">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12 row">
+                            <!-- RESULTS OF QUOTE REQUEST -->
+                                <div class="row quote-results mt-0" style="border-style:solid; border-color: #3072e0">
+                                    <p id="quote-intro" class="quote-results mt-0">
+                                        <!-- Filled after calculating the number of elevators required for the project --> 
+                                    </p>
+                                    <div class="quote-results col-lg-12 row">
+                                        <div class="col-lg-2">&nbsp</div>
+                                        <div id="elevator-amount" class="form-group quote-results row">
+                                            <div class="control-label col-lg-6 col-sm-8">
+                                                <label for="input-elevator-amount" class="control-label">Number of elevators required</label>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <textarea id="input-elevator-amount" name="elevator_amount"></textarea>
+                                            </div>
+                                        </div>
+                                        <div id="elevator-unit-price" class="form-group quote-results row">
+                                            <div class="control-label col-lg-6 col-sm-8">
+                                                <label for="input-elevator-unit-price" class="control-label" >Elevator Unit Price</label>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <textarea id="input-elevator-unit-price" name="elevator_unit_price"></textarea>
+                                            </div>                                
+                                        </div>
+                                        <div id="elevator-total-price" class="form-group quote-results row">
+                                            <div class="control-label col-lg-6 col-sm-8">
+                                                <label for="input-elevator-total-price" class="control-label">Elevators Total Price</label>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <textarea id="input-elevator-total-price" name="elevator_total_price"></textarea>
+                                            </div>
+                                        </div>
+                                        <div id="installation-fees" class="form-group quote-results row">
+                                            <div class="control-label col-lg-6 col-sm-8">
+                                                <label for="input-installation-fees" class="control-label">Installation fees</label>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <textarea id="input-installation-fees" name="elevator_installation_fees" ></textarea>
+                                            </div>
+                                        </div>
+                                        <div id="final-price" class="form-group quote-results row">
+                                            <div class="control-label col-lg-6 col-sm-8">
+                                                <label for="input-final-price" class="control-label">Final price</label>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <textarea id="input-final-price" name="final_price"></textarea>
+                                            </div>  
+                                        </div>
+                                        <div id="final-price" class="form-group quote-results row">
+                                            <div class="control-label col-lg-6 col-sm-8">
+                                                <label for="input-final-price" class="control-label">Company Name*</label>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <input required id="company" name="company_name">
+                                            </div>  
+                                        </div>
+                                        <div id="final-price" class="form-group quote-results row">
+                                            <div class="control-label col-lg-6 col-sm-8">
+                                                <label for="input-final-price" class="control-label">Email*</label>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <input required type="text" id="email" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address">
+                                            </div>  
+                                        </div>
+                                        <div id="another-line-row-3" class="product-line row col-lg-12">
+                                            <div class="col-lg-6 mt-25 text-center mb-25">
+                                                <button id="request-new-quote" type="button" class="btn btn-primary">TRY WITH NEW DATA</button>
+                                            </div>
+                                            <div class="col-lg-6 mt-25 text-center mb-25">
+                                                <button id="send-quote" type="submit" class="btn btn-primary" value="">SEND YOUR QUOTE</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div> 
+                                
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                <%# </div> %>
+            </section>
+            <!-- /QUOTE -->
+
+            <!-- FOUNDATION -->
+			    <section class="parallax parallax-1" style="background-image: url(<%= image_path "elavator-cityview-crop.jpg"%>)">
+				<div class="overlay dark-5"></div>
+				<div class="container">
+					<div class="text-center">
+						<h2 class="fs-40 fw-300">Elevating Quality Since 1976</h2>
+                        <%= link_to "CONTACT US",root_path(:anchor => "contact"), class:"btn btn-primary btn-lg" %>
+					</div>
+				</div>
+            </section>
+            <!-- /FOUNDATION -->
+            
+
+            
+            <!-- FOOTER -->
+			<footer id="footer">
+				<div class="container mt-0 mb-30">
+					<div class="row">
+						<!-- col #1 -->
+						<div class="col-md-7">
+							<h3 class="letter-spacing-1">WHY US?</h3>
+							<!-- Small Description -->
+							<p>
+								We have the conviction that we create the most innovative and reliable products on the market. </br>
+								Contact us today for any questions you might have.
+							</p>
+						</div>
+						<!-- /col #1 -->
+						<!-- col #2 -->
+						<div class="col-md-5">
+                            <h3>(418) 555-1234</h3>
+                            <p>
+                                <span class="block"><strong><i class="fa fa-map-marker"></i> 418-725 Boulevard Lebourgneuf, Québec, QC G2J 0C4, Canada</span>
+                                <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codebox.biz">info@codebox.biz</a></span>
+                            </p>
+						</div>
+						<!-- /col #2 -->
+					</div>
+				</div>
+				<div class="copyright">
+					<div class="container">
+						&copy; All Rights Reserved
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+		</div>
+		<!-- /WRAPPER -->
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+        
+
+        <script>
+            hideQuestions();
+            showRelevantQuestions();
+            elevatorsRequired();
+            requestQuote();
+            quoteAgain();
+            calculUpdate();
+            sendQuote();
+        </script>

@@ -1,0 +1,2 @@
+class FactElevator < DwhRecord
+end

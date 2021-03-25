@@ -1,0 +1,294 @@
+
+			<!-- WRAPPER -->
+			<div id="wrapper">
+				<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+        <!-- TOP NAV -->
+        <header id="topNav">
+            <div class="container">
+                <!-- Mobile Menu Button -->
+                <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Logo -->
+                <%= link_to image_tag('logo-transparent.png'), root_path, :alt => "Rocket Elevators logo", :class => "logo float-left scrollTo" %>
+                <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+                    <nav class="nav-main">
+                        <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                            <li class="active"><!-- HOME -->
+                                <%= link_to "HOME",root_path, :id => "home-nav" %>
+                            </li>
+							<li>
+								<a id="service-nav" href="#services">SERVICES</a>    
+								<ul class="dropdown-menu">
+									<li><%= link_to "Services",root_path(:anchor => "services"), class: "dropdown-item" %></li>
+									<div class="dropdown-divider"></div>
+									<li><%= link_to "Corporate Buildings",pages_commercial_url, class: "dropdown-item" %></li>
+									<li><%= link_to "Residential Buildings",pages_residential_url, class: "dropdown-item" %></li>
+									<li><%= link_to "Request a Quote",pages_quote_url, class: "dropdown-item" %></li>
+								</ul>    
+							</li>
+                            <li><!-- PORTFOLIO -->
+                                <%= link_to "PORTFOLIO",root_path(:anchor => "portfolio") %>
+                            </li>
+                            <li><!-- NEWS -->
+                                <%= link_to "NEWS",root_path(:anchor => "news") %>
+                            </li>
+                            <li><!-- CLIENTS -->
+                                <%= link_to "CLIENTS",root_path(:anchor => "clients") %>
+                            </li>
+                            <li><!-- CONTACT -->
+                                <%= link_to "CONTACT",root_path(:anchor => "contact") %>
+                            </li>
+							<% if user_signed_in? && current_user.supervisor_role? %>
+								<li><!-- LOGOUT -->
+									<%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+								</li>
+								<li><!-- ADMIN -->
+									<%= link_to "ADMIN", rails_admin_url %>
+								</li>
+							<% elsif user_signed_in? %>
+								<li><!-- LOGOUT -->
+									<%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+								</li>
+							<% else %>
+								<li><!-- LOGIN -->
+									<%= link_to "LOGIN", new_user_session_path %>
+								</li>
+							<% end %>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- /Top Nav -->
+				</div>
+
+				<!-- INTRO -->
+				<div class="slider fullwidthbanner-container roundedcorners">
+					<div id="home" class="fullwidthbanner" data-delay="0" data-height="600" data-shadow="0" data-navigationStyle="preview2">
+						<ul class="hide">
+							<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off"  data-title="Our Values">
+								<!-- MAIN IMAGE -->
+								<img src="/assets/elevator-glass-cylinder.jpeg"  alt="cover image"  data-bgposition="center" data-bgfit="cover" data-bgrepeat="no-repeat">
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<a href="#contact" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
+					<span class="font-lato fs-30">
+						<strong>
+							Elevate Safety, Speed and Style in Commercial, Corporate or Hybrid Buildings
+						</strong>
+					</span>
+				</a>
+				<!-- INTRO -->
+
+				<!-- TECHNOLOGY -->
+				<section id="technology">
+					<div class="container">
+						<div class="heading-title heading-dotted text-center">
+							<h2>Our Talent and Creativity at Your Service!</h2>
+						</div>
+						<h3 class="text-center">
+							Advanced Technology
+						</h3>
+						<div>
+							<p>
+								Rocket Elevators has been deploying elevator services in commercial, corporate and hybrid buildings that 
+								mix residential and commercial spaces for more than 40 years. Given to raising our industry's
+								standards, we propose a technology equivalent to none in terms of comfort and silence, performance, safety 
+								and reliability.
+							</p>
+							<p>	
+								That is why we were the first to bring artificial intelligence to air quality control
+								and were the first to extend that technology to all our products. That's how we constantly push the elevator's world 
+								to reinvent itself!
+							</p> 
+							<p>
+								That is also why we developed advanced people flow solutions that offer both scalable and 
+								flexible access control and seamlessly integrate with your elevator system and building doors. 
+							</p>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-12">
+									<%= image_tag 'elevator-open.jpeg', alt: "elevator pic", width: "100%" , height: "399", class:"img-fluid" %>
+								</a>
+								<h3 class="mt-10 text-center">Access</h3>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12">
+									<%= image_tag 'destination-control.png', alt: "destination control pic", width: "100%", class: "img-fluid" %>
+								</a>
+								<h3 class="mt-10 text-center">Direction</h3>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12">
+									<%= image_tag 'infotainment.png', alt: "lady in elevator", width: "100%", class: "img-fluid" %>
+								</a>
+								<h3 class="mt-10 text-center">Infotainment</h3>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12">
+									<%= image_tag 'flow-monitoring.png', alt: "computer monitoring", width: "100%", class: "img-fluid" %>
+								</a>
+								<h3 class="mt-10 text-center">Monitoring</h3>
+							</div>
+						</div>
+						<div class="text-center">
+							<a class="btn btn-primary btn-lg" href="quote.html" target="_self">GET A QUOTE <i class="fa fa-angle-right"></i></a>
+						</div>
+					</div>
+				</section>
+				<!-- /TECHNOLOGY -->
+
+				<div class="parallax parallax-1">
+					<%= image_tag 'project-management2', alt: "project management cycle", width: "100%", class: "img-fluid" %>
+				</div>
+							
+				<!-- PLANNING -->
+				<section id="commercial-planning">
+					<div class="container">
+						<div class="heading-title heading-dotted text-center">
+							<h2><em>Rocket</em> Solid Planning</h2>
+						</div>
+						<div>
+							<p>
+								Our job is to make <em>your</em> job easier. And since this starts with good communication, our pledge at Rocket Elevators 
+								is first and foremost to <em>listen</em> to you and <em>your</em> needs to get a perfect grasp of 
+								<em>your</em> project. From then on, we'll make sure everything is in place for a smooth, 
+								trouble-free elevator installation process to keep your project on schedule and on budget, with no surprises.
+							</p>
+							<p>
+								Depending on the nature of your project, this will start with collecting the following key pieces of information:
+							</p>
+							<div class="container">
+								<div class="row mb-10">
+									<div id="commercial-data" class="col-md-8 col-sm-12 mt-0 mb-0">
+										<h3 class="mt-0">Commercial Building</h3>
+										<ul>
+											<li>The number of distinct businesses</li>
+											<li>The number of floors in the building</li>
+											<li>The number of basements</li>
+											<li>The number of parking spaces available</li>
+											<li>The number of elevator cages to be deployed</li>
+										</ul> 
+									</div>
+									<div class="col-md-4 col-sm-12 mt-30 mb-10">
+										<%= image_tag 'shopping-mall-elevator2', alt: "commercial building", width: "100%", height: "150px" %>
+									</div>
+								</div>
+								<div class="row mb-10">
+									<div id="corporate-data" class="col-md-8 col-sm-12 mt-0 mb-0">
+										<h3 class="mt-0">Corporate Building</h3>
+										<ul>
+											<li>The number of separate tenant companies</li>
+											<li>The number of floors in the building</li>
+											<li>The number of basements</li>
+											<li>The number of parking spaces available</li>
+											<li>The maximum number of occupants per floor</li>
+										</ul> 
+									</div>
+									<div class="col-md-4 col-sm-12 mt-30 mb-10">
+										<%= image_tag 'corporate-building-elevator2.png', alt: "corporate building", width: "100%",  height: "150px" %>
+									</div>
+								</div>
+								<div class="row mb-10">
+									<div id="hybrid-data" class="col-md-8 col-sm-12 mt-0 mb-0">
+										<h3 class="mt-0">Hybrid Building</h3>
+										<ul>
+											<li>The number of distinct businesses</li>
+											<li>The number of floors in the building</li>
+											<li>The number of basements</li>
+											<li>The number of parking spaces available</li>
+											<li>The maximum number of occupants per floor</li>
+											<li>The number of hours of daily commercial and/or corporate activity of the building</li>
+										</ul> 
+									</div>
+									<div class="col-md-4 col-sm-12 mt-30 mb-10">
+										<%= image_tag 'hybrid-building.png', alt: "corporate building", width: "100%",  height: "150px" %>
+									</div>
+								</div>
+							</diV>
+							<h3 class="text-center mt-20">
+								With Rocket Elevators planning, <br> your project is on the fast track to success!
+							</h3>
+							<br>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-4 col-md-4 col-sm-12">
+										<%= image_tag 'effective-project-kickoff.jpg', alt: "team meeting pic", width: "100%", class:"img-fluid" %>
+									</a>
+									<h3 class="mt-10 text-center">Your Plan, Our Plan</h3>
+								</div>
+		
+								<div class="col-lg-4 col-md-4 col-sm-12">
+										<%= image_tag 'on-time-on-budget2.png', alt: "dollar-clock pic", width: "100%", class:"img-fluid" %>
+									</a>
+									<h3 class="mt-10 text-center">On Time, Within Budget</h3>
+								</div>
+
+								<div class="col-lg-4 col-md-4 col-sm-12">
+										<%= image_tag 'elevator-maintenance.jpeg', alt: "workers pic", width: "100%", class:"img-fluid" %>
+									</a>
+									<h3 class="mt-10 text-center">By Professionals</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</section>
+				<!-- /PLANNING -->
+				
+				<!-- FOUNDATION -->
+				<section class="parallax parallax-1" style="background-image: url(<%= image_path "elavator-cityview-crop.jpg"%>)">
+					<div class="overlay dark-5"></div>
+					<div class="container">
+						<div class="text-center">
+							<h2 class="fs-40 fw-300">Elevating Quality Since 1976</h2>
+							<a class="btn btn-default btn-lg" href="quote.html" target="_self">GET A QUOTE <i class="fa fa-angle-right"></i></a>
+							&nbsp; &nbsp;
+							<%= link_to "CONTACT US",root_path(:anchor => "contact"), class:"btn btn-primary btn-lg" %>
+						</div>
+					</div>
+				</section>
+
+
+				<!-- FOOTER -->
+				<footer id="footer">
+					<div class="container mt-0 mb-30">
+						<div class="row">
+							<!-- col #1 -->
+							<div class="col-md-7">
+								<h3 class="letter-spacing-1">WHY US?</h3>
+								<!-- Small Description -->
+								<p>
+									We have the conviction that we create the most innovative and reliable products on the market. </br>
+									Contact us today for any questions you might have.
+								</p>
+							</div>
+							<!-- /col #1 -->
+							<!-- col #2 -->
+							<div class="col-md-5">
+								<h3>(418) 555-1234</h3>
+								<p>
+									<span class="block"><strong><i class="fa fa-map-marker"></i> 418-725 Boulevard Lebourgneuf, Québec, QC G2J 0C4, Canada</span>
+									<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></span>
+								</p>
+							</div>
+							<!-- /col #2 -->
+						</div>
+					</div>
+					<div class="copyright">
+						<div class="container">
+							&copy; All Rights Reserved
+						</div>
+					</div>
+				</footer>
+				<!-- /FOOTER -->
+			</div>
+			<!-- /wrapper -->
+
+			<!-- SCROLL TO TOP -->
+			<a href="#" id="toTop"></a>

@@ -1,0 +1,902 @@
+
+<!-- WRAPPER -->
+		<div id="wrapper">
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+        <!-- TOP NAV -->
+        <header id="topNav">
+            <div class="container">
+                <!-- Mobile Menu Button -->
+                <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Logo -->
+                <%= link_to image_tag('logo-transparent.png'), root_path, :alt => "Rocket Elevators logo", :class => "logo float-left scrollTo" %>
+              
+                <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+                    <nav class="nav-main">
+                        <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                            <li class="active"><!-- HOME -->
+                                <%= link_to "HOME",root_path, :id => "home-nav" %>
+                            </li>
+							<li>
+								<a id="service-nav" href="#services">SERVICES</a>    
+								<ul class="dropdown-menu">
+									<li><%= link_to "Services",root_path(:anchor => "services"), class: "dropdown-item" %></li>
+									<div class="dropdown-divider"></div>
+									<li><%= link_to "Corporate Buildings",pages_commercial_url, class: "dropdown-item" %></li>
+									<li><%= link_to "Residential Buildings",pages_residential_url, class: "dropdown-item" %></li>
+									<li><%= link_to "Request a Quote",pages_quote_url, class: "dropdown-item" %></li>
+								</ul>    
+								</li>
+
+                            <li><!-- PORTFOLIO -->
+                                <%= link_to "PORTFOLIO",root_path(:anchor => "portfolio") %>
+                            </li>
+                            <li><!-- NEWS -->
+                                <%= link_to "NEWS",root_path(:anchor => "news") %>
+                            </li>
+                            <li><!-- CLIENTS -->
+                                <%= link_to "CLIENTS",root_path(:anchor => "clients") %>
+                            </li>
+                            <li><!-- CONTACT -->
+                                <%= link_to "CONTACT",root_path(:anchor => "contact") %>
+                            </li>
+						  
+								<li><!-- INTERVENTION -->
+								<% if user_signed_in? && current_user.supervisor_role? %>
+									<%= link_to "INTERVENTION" ,interventions_path %>
+								<%	end %>
+								</li>
+														
+														
+							<% if user_signed_in? && current_user.supervisor_role? %>
+								<li><!-- LOGOUT -->
+									<%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+								</li>
+								<li><!-- ADMIN -->
+									<%= link_to "ADMIN", rails_admin_url %>
+								</li>
+								
+								
+							<% elsif user_signed_in? %>
+								<li><!-- LOGOUT -->
+									<%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+								</li>
+							<% else %>
+								<li><!-- LOGIN -->
+									<%= link_to "LOGIN", new_user_session_path %>
+								</li>
+							<% end %>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- /Top Nav -->
+
+			</div>
+
+			<!-- REVOLUTION SLIDER -->
+			<div class="slider fullwidthbanner-container roundedcorners">
+				<div id="home" class="fullwidthbanner" data-delay="7000" data-height="600" data-shadow="0" data-navigationStyle="preview2">
+					<ul class="hide">
+
+						<!-- SLIDE 1 -->
+						<!-- set data-masterspeed to 7000ms-->
+						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off"  data-title="Our Values">
+							<!-- MAIN IMAGE -->
+							<img src="/assets/elevator-floorbuttons.jpg"  alt="cover image"  data-bgposition="center" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+							<div class="tp-caption font-roboto red_big skewfromleft tp-resizeme"
+								data-x="center"
+								data-y="100"
+								data-speed="500"
+								data-start="0"
+								data-easing="Power3.easeInOut"
+								data-splitin="words"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="600"
+								style="z-index: 2; color:#fff; opacity: 1; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									Elevate Safety, Speed and Style
+							</div>
+
+							<div class="tp-caption content_text_center skewfromleft tp-resizeme"
+								data-x="center"
+								data-y="280"
+								data-speed="500"
+								data-start="0"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="600"
+								style="z-index: 3; font-size:20px; font-weight:strong; color:#fff; text-shadow:none;">
+									<strong>That's what we believe in, that's what we deliver.</strong>
+							</div>
+
+							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
+								data-x="center"
+								data-y="400"
+								data-speed="500"
+								data-start="500"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+								style="z-index: 4; max-width: auto;">
+									<a class="btn btn-primary btn-lg" href="#services" target="_self">OUR SERVICES <i class="fa fa-angle-right"></i></a>
+							</div>
+
+							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
+								data-x="center"
+								data-y="460"
+								data-speed="500"
+								data-start="500"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+								style="z-index: 4; max-width: auto;">
+									<%= link_to "GET A QUOTE",pages_quote_url, class: "btn btn-default btn-lg"%>
+						</li>
+
+						<!-- SLIDE 2 Residential Services -->
+						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Residential Buildings">
+							<!-- MAIN IMAGE -->
+							<img src="/assets/residential-hall2.jpg" alt="cover image"  data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
+								data-x="center"
+								data-y="100"
+								data-speed="500"
+								data-start="0"
+								data-easing="Cubic.easeOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									Residential Buildings
+							</div>
+
+							<div class="tp-caption skewfromrightshort tp-resizeme"
+								data-x="center"
+								data-y="280"
+								data-speed="500"
+								data-start="0"
+								data-easing="easeInCirc"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 3; font-size:20px; font-weight:strong; color:#fff; text-shadow:none;">
+									Anywhere from the ground up to the comfort of their home, <br>
+									we deliver people safe, stylish and quiet technology.
+							</div>
+
+							<div class="tp-caption sfb tp-resizeme"
+								data-x="center"
+								data-y="400"
+								data-speed="500"
+								data-start="500"
+								data-easing="Power3.easeIn"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 4; max-width: auto;">
+									<%= link_to "SEE DETAILS",pages_residential_url, class: "btn btn-primary btn-lg" %>
+							</div>
+
+							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
+								data-x="center"
+								data-y="460"
+								data-speed="500"
+								data-start="500"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+								style="z-index: 4; max-width: auto;">
+									<%= link_to "GET A QUOTE",pages_quote_url, class: "btn btn-default btn-lg" %>
+
+						</li>
+
+						<!-- SLIDE 3 Corporate Building Services -->
+						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Corporate Building Services">
+							<!-- MAIN IMAGE -->
+							<img src="/assets/elevator-3.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
+								data-x="center"
+								data-y="100"
+								data-speed="500"
+								data-start="0"
+								data-easing="Cubic.easeOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+									Corporate Buildings
+							</div>
+
+							<div class="tp-caption skewfromrightshort tp-resizeme"
+								data-x="center"
+								data-y="280"
+								data-speed="500"
+								data-start="0"
+								data-easing="easeInCirc"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 3; font-size:20px; font-weight:strong; color:#fff; text-shadow:none;">
+									Let people meet up with safety, speed and style<br>
+									as the come and leave the office.
+							</div>
+
+							<div class="tp-caption sfb tp-resizeme"
+								data-x="center"
+								data-y="400"
+								data-speed="500"
+								data-start="500"
+								data-easing="Power3.easeIn"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="1"
+								data-endelementdelay="0.1"
+								data-endspeed="500"
+								style="z-index: 4; max-width: auto;">
+									<%= link_to "SEE DETAILS",pages_commercial_url, class: "btn btn-primary btn-lg" %>
+							</div>
+
+							<div class="tp-caption skewfromleft tp-resizeme  un-button-2-lg"
+								data-x="center"
+								data-y="460"
+								data-speed="500"
+								data-start="500"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+								style="z-index: 4; max-width: auto;">
+									<%= link_to "GET A QUOTE",pages_quote_url, class: "btn btn-default btn-lg" %>
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+			<!-- /REVOLUTION SLIDER -->
+
+
+			<hr class="m-0" /><!-- 1px line separator -->
+
+
+			<!-- BUTTON CALLOUT -->
+			<a href="#contact" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
+				<span class="font-lato fs-30">
+					<strong>
+						We value what you value!
+						Contact us &raquo;
+					</strong>
+				</span>
+			</a>
+			<!-- /BUTTON CALLOUT -->
+
+			<!-- SERVICES -->
+			<section id="services">
+				<div class="container">
+
+					<div class="heading-title heading-dotted text-center">
+						<h2>Services</h2>
+					</div>
+					<div class="text-center">
+						<p>In everything we do, we believe in thinking differently and rising standards. </br>
+							And we believe that elevators should be safe, fast and have style. </br>
+							That's what we build and that's why we build them.
+						</p>
+					</div>
+
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+						
+							<%= image_tag 'recognition.jpg', alt: "awards pic", width: "100%" %>
+							<h3 class="mt-10">Awards</h3>
+							<p>We have worked on numerous major projects over the years and won several world class awards that attest to  
+								our capacity to bring the elevator industry to new heigths.
+							</p>
+							<a href="#portfolio" data-filter="all" class="filter btn btn-default">READ MORE</a>
+						</div>
+						<div class="col-md-4 col-sm-12">
+								<%= image_tag 'residential1.jpg', alt: "condo complex pic", width: "100%" %>
+							</a>
+
+							<h3 class="mt-10">Residential Buildings</h3>
+							<p>Satisfied residential tenants make good tenants, and this is what Rocket Elevators will bring you with its 
+								safe, efficient, quiet and reliable technology.</p>
+							<%= link_to "READ MORE",pages_residential_url, class: "btn btn-default" %>
+							
+						</div>
+						<div class="col-md-4 col-sm-12">
+								<%= image_tag 'elevator-glass-upview.jpg', alt: "elevator pic", width: "100%" %>
+							</a>
+							<h3 class="mt-10">Corporate Buildings</h3>
+							<p>Our expertise in delivering elevator systems for commercial and corporate buildings has proven that, 
+								when it comes to client satisfaction, the sky for us is not a limit.</p>
+							<%= link_to "READ MORE",pages_commercial_url, class: "btn btn-default" %>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /SERVICES -->
+
+
+			<!-- FOUNDATION -->
+			<section class="parallax parallax-1" style="background-image: url(<%= image_path "elavator-cityview-crop.jpg"%>)">
+				<div class="container">
+					<div class="text-center">
+						<h2 class="fs-40 fw-300">Elevating Quality Since 1976</h2>
+						<%= link_to "GET A QUOTE",pages_quote_url, class: "btn btn-default btn-lg" %>
+						
+						<a class="btn btn-primary btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+			</section>
+			<!-- /FOUNDATION -->
+
+			<!-- PORTFOLIO -->
+			<section id="portfolio">
+				<div class="container">
+					<div class="heading-title heading-dotted text-center">
+						<h2>Portfolio</h2>
+					</div>
+					<div class="text-center">
+						<ul class="nav nav-pills mix-filter mb-60">
+							<li data-filter="all" class="filter active"><a href="#">All</a></li>
+							<li data-filter="residential" class="filter"><a href="#">Residential</a></li>
+							<li data-filter="corporate" class="filter"><a href="#">Corporate</a></li>
+							<li data-filter="award" class="filter"><a href="#">Awards</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="portfolio-nogutter">
+					<div class="row mix-grid">
+						<!-- item 1 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix corporate">
+							<div class="item-box">
+								<figure>
+									<%= image_tag 'cbc-radio-canada.jpg', alt: "CBC Maison de Radio-Canada pic", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Maison Radio-Canada, Montreal</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 1 -->
+
+						<!-- item 2 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix residential">
+							<div class="item-box">
+								<figure>
+									<span class="inner">
+										</a>	
+									</span>
+									<%= image_tag 'elevator-open.jpeg', alt: "elevator pic", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Residential Complex, Alta Vista ON</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 2 -->
+
+						<!-- item 3 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix corporate">
+							<div class="item-box">
+								<figure>
+									<%= image_tag 'mexico-torre-mayor.jpg', alt: "Mexico's Torre Mayor", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Torre Mayor, Mexico</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 3 -->
+
+						<!-- item 4 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix award">
+							<div class="item-box">
+								<figure>
+									<%= image_tag 'Architizer2016finalist.jpg', alt: "award pic", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Architizer Design Award</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 4 -->
+
+						<!-- item 5 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix residential">
+							<div class="item-box">
+								<figure>
+									<%= image_tag 'elavator-flying-chair.jpg', alt: "elevator pic", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Residence with Style, Burlington VT</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 5 -->
+
+						<!-- item 6 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix corporate">
+							<div class="item-box">
+								<figure>
+									<%= image_tag 'olympic-stadium.png', alt: "Montreal Olympic Stadium", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Olympic Tower, Montreal</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 6 -->
+
+						<!-- item 7 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix award">
+							<div class="item-box">
+								<figure>
+									<%= image_tag 'Artitizer-special-mention.png', alt: "award pic", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Architizer Innovation Award</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 7 -->
+
+						<!-- item 8 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix corporate">
+							<div class="item-box">
+								<figure>
+									<%= image_tag 'Gran-Torre-Santiago.png', alt: "Gran Torre Santiago", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Gran Torre Santiago, Chili</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 8 -->
+
+						<!-- item 9 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix residential">
+							<div class="item-box">
+								<figure>
+									<%= image_tag 'elavator-home-project.jpg', alt: "elevator pic", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Residence with Style, Cambridge MA</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 9 -->
+
+						<!-- item 10 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix award">
+							<div class="item-box">
+								<figure>
+									<%= image_tag 'THS-finalist-logo.jpg', alt: "awards logo", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Health & Safety Awards Finalist</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 10 -->
+
+						<!-- item 11 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix corporate">
+							<div class="item-box">
+								<figure>
+									<%= image_tag 'desjardins-office.png', alt: "Desjardins head office", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Desjardins Head Office, Lévis QC</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 11 -->
+
+						<!-- item 12 -->
+						<div class="col-lg-3 col-md-4 col-sm-12 mix corporate">
+							<div class="item-box">
+								<figure>
+									<%= image_tag 'chateau-frontenac-hall.jpg', alt: "Fairmont Le Château Frontenac elevator hall", width: "100%" , height: "399", class:"img-fluid" %>
+								</figure>
+								<div class="item-box-desc">
+									<h3>Fairmont Le Château Frontenac, Quebec City</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /item 12 -->
+					</div>
+				</div>
+			</section>
+			<!-- /PORTFOLIO -->
+
+
+			<!-- TEAM -->
+			<section id="team" class="section-xs dark">
+				<div class="container">
+					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 5000, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
+						<div id="CEO" class="testimonial">
+							<figure>
+							<%= image_tag 'CEO.jpg', alt: "CEO pic", class:"rounded" %>
+							</figure>
+							<div class="testimonial-content p-0">
+								<p class="lead">No great company thrives without inspirational leaders.</p>
+								<cite>
+									Serge Savoie
+									<span>CEO</span>
+								</cite>
+							</div>
+						</div>
+						<div id="employee" class="testimonial">
+							<figure>
+							<%= image_tag 'employee-of-the-month.jpg', alt: "employee pic", class:"rounded" %>
+							</figure>
+							<div class="testimonial-content p-0">
+								<p class="lead">It's incredible to see you consistently pushing the bar. Thank you!</p>
+								<cite>
+									Raynald Prévèreau
+									<span>Employee of the Month</span>
+								</cite>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /TEAM -->
+
+			<!-- NEWS -->
+			<section id="news">
+				<div class="container">
+					<div class="heading-title heading-dotted text-center">
+						<h2>Recent News</h2>
+					</div>
+
+					<!--
+						controlls-over		= navigation buttons over the image
+						buttons-autohide 	= navigation buttons visible on mouse hover only
+
+						data-plugin-options:
+							"singleItem": true
+							"autoPlay": true (or ms. eg: 4000)
+							"navigation": true
+							"pagination": true
+							"items": "4"
+
+						owl-carousel item paddings
+							.owl-padding-0
+							.owl-padding-3
+							.owl-padding-6
+							.owl-padding-10
+							.owl-padding-15
+							.owl-padding-20
+					-->
+					<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over" data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 7000, "navigation": true, "pagination": false}'>
+						<!-- item 1 -->
+						<div class="img-hover"> 
+							<a href="https://elevatortoday.com/2020/03/03/thyssenkrupp-sells-elevator-technology-business-for-e17-2-billion/" target="_blank">
+								<%= image_tag 'news-thyssenkrupp.jpg', alt: "thyssenkrupp head office", class:"img-fluid", width: "451px" %>
+							</a>
+							<h4 class="text-left mt-20"><a href="https://elevatortoday.com/2020/03/03/thyssenkrupp-sells-elevator-technology-business-for-e17-2-billion/" target="_blank">Thyssenkrupp Elevator Division Sold</a></h4>
+							<p class="text-left">Rocket Elevators purchases Thyssenkrupp's elevator division.</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i>
+									March 3, 2020
+								</li>
+							</ul>
+						</div>
+						<!-- item 2 -->
+						<div class="img-hover"> 
+							<a href="https://www.cnn.com/style/article/torch-tower-tokyo-skyscraper/index.html" target="_blank">
+								<%= image_tag 'tokyo-torchtower.jpg', alt: "Tokyo Torch Tower", class:"img-fluid"%>
+							</a>
+							<h4 class="text-left mt-20"><a href="https://www.cnn.com/style/article/torch-tower-tokyo-skyscraper/index.html" target="_blank">Tokyo Torch Tower</a></h4>
+							<p class="text-left">Quotes opened for Japan's new tallest building</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i>
+									Oct 4, 2020
+								</li>
+							</ul>
+						</div>
+						<!-- item 3 -->
+						<div class="img-hover"> 
+							<a href="https://elevatortoday.com/2020/02/08/world-elevator-escalator-expo-2020/" target="_blank">
+								<%= image_tag '2020-elevator-expo.jpeg', alt: "elevator expo", class:"img-fluid"%>
+							</a>
+							<h4 class="text-left mt-20"><a href="https://elevatortoday.com/2020/02/08/world-elevator-escalator-expo-2020/" target="_blank">2020 World Elevator & Escalator Expo</a></h4>
+							<p class="text-left">The 14th China International Elevator Exhibition held in Shanghai.</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i>
+									Jan 5, 2021
+								</li>
+							</ul>
+						</div>
+						<!-- item 4 -->
+						<div class="img-hover"> 
+							<a href="https://workinjapan.today/hightech/fastest-elevators-of-the-world/#:~:text=The%20world's%20fastest%20elevator%2C%20developed,95th%20in%20around%2042%20seconds." target="_blank">
+								<%= image_tag 'world-fastest-elevator.jpg', alt: "fastest elevator", class:"img-fluid"%>
+							</a>
+							<h4 class="text-left mt-20"><a href="https://workinjapan.today/hightech/fastest-elevators-of-the-world/#:~:text=The%20world's%20fastest%20elevator%2C%20developed,95th%20in%20around%2042%20seconds." target="_blank">Word's Faster Elevator</a></h4>
+							<p class="text-left">As skyscrapers get taller, elevators are getting faster. The new ones travel as faster than a car on a city street at over 75 km/h.</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i>
+									Fed 2, 2013
+								</li>
+							</ul>
+						</div>
+						<!-- item 5 -->
+						<div class="img-hover">
+							<a href="https://elevatortoday.com/2014/05/02/hyundai-elevator-called-foot/" target="_blank">
+								<%= image_tag 'touchless-footbutton-huyndai-elevator.png', alt: "touchless controls", class:"img-fluid"%>
+							</a>
+							<h4 class="text-left mt-20"><a href="https://elevatortoday.com/2014/05/02/hyundai-elevator-called-foot/" target="_blank">Touchless in Pandemic Time</a></h4>
+							<p class="text-left">Take advantage of Hyunday Elevator' touchless footbutton technology.</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i>
+									May 2, 2014
+								</li>
+							</ul>
+						</div>
+						<!-- item 6 -->
+						<div class="img-hover">
+							<a href="https://www.elevator-business.com/elevators-artificial-intelligence/?lang=en" target="_blank">
+								<%= image_tag 'news-airquality.jpg', alt: "air quality management", class:"img-fluid"%>
+							</a>
+							<h4 class="text-left mt-20"><a href="https://www.elevator-business.com/elevators-artificial-intelligence/?lang=en" target="_blank">Top Air Quality</a></h4>
+							<p class="text-left">Rocket Elevators to bring AI in elevator air quality control.</p>
+							<ul class="text-left fs-12 list-inline list-separator">
+								<li>
+									<i class="fa fa-calendar"></i>
+									Feb 12, 2019
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /NEWS -->
+
+			<!-- CLIENTS -->
+			<section id="clients" class="alternate">
+				<div class="container">
+					<div class="heading-title heading-dotted text-center">
+						<h2>Our Clients</h2>
+					</div>
+					<ul class="row  list-inline">
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'logo-chateau-frontenac.png', alt: "Fairmont Le Château Frontenac", class:"img-fluid"%>
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'cbc-radio-canada.png', alt: "CBC Maison de Radio-Canada", class:"img-fluid"%>
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'logo-olympic-park.jpg', alt: "Montreal Olympic Park", class:"img-fluid"%>
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'logo-Pfizer.jpg', alt: "Pfizer", class:"img-fluid"%>
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'logo-desjardins.jpg', alt: "Desjardins", class:"img-fluid"%>
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'logo-lacapitale.jpeg', alt: "La Capitale", class:"img-fluid"%>
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'logo-boursedemontreal.jpg', alt: "Bourse de Montréal", class:"img-fluid"%>
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'logo-TDBank.png', alt: "TD Bank", class:"img-fluid"%>
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'logo-vw.jpg', alt: "Volkswagen", class:"img-fluid"%>
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'logo-semanticbits.png', alt: "Semanticbits", class:"img-fluid"%>
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'logo-IBM.jpg', alt: "IBM", class:"img-fluid"%>
+						</li>
+						<li class="col-md-3 col-sm-3 col-6">
+							<%= image_tag 'logo-harvard-university.png', alt: "Harvard University", class:"img-fluid"%>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+			<!-- /CLIENTS -->
+
+			<!-- CONTACT -->
+			<section id="contact">
+				<div class="container">
+					<header class="heading-title heading-dotted text-center">
+						<h2>Contact Us</h2>
+						<p>We can serve you in English, French, Spanish and Portugese</p>
+						<hr />
+					</header>
+					<div class="row">
+						<!-- INFO -->
+						<div class="col-md-4 col-sm-4">
+							<h3>Visit Us</h3>
+							<div id="map">
+								<%= image_tag '725Lebourneuf-building.png', alt: "builging-pic", width: "100%"%>
+								<a link href="https://www.google.com/maps/place/725+Boulevard+Lebourgneuf+%23418,+Quebec+City,+QC+G2J+1S1/@46.84284,-71.2818837,17z/data=!3m1!4b1!4m5!3m4!1s0x4cb897dddd6aaaa7:0x68d3004bc2fe00d5!8m2!3d46.84284!4d-71.279695"
+								target="_blank">
+								<%= image_tag '725Lebourneuf-map.png', alt: "company address", width: "100%"%>
+							</div>
+							<p>
+								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 418-725 Boulevard Lebourgneuf, Québec, QC G2J 0C4, Canada</span>
+								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> (418) 555-1234</a></span>
+								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></span>
+							</p>
+						</div>
+						<!-- /INFO -->
+						
+						<!-- FORM -->						
+						<div class="col-md-8 col-sm-8">
+							<h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
+							<form enctype=multipart/form-data id="lead" action="/leads" method="post">
+								<fieldset>
+									<%# <input type="hidden" name="action" value="contact_send" /> %>
+									
+									<!-- row 1 -->
+									<div class="row">  
+										<div class="col-md-4">
+											<label for="name">Contact Full Name *</label>
+											<input required class="form-control" name="name" id="name">
+										</div>
+										<div class="col-md-4">
+											<label for="email">E-mail Address *</label>
+											<input required type="text" class="form-control" name="email" id="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address">
+										</div>
+										<div class="col-md-4">
+											<label for="phone">Phone *</label>
+											<input required class="form-control" name="phone" id="phone">
+										</div>
+									</div>
+									<!-- row 2 -->
+									<div class="row">   
+										<div class="col-md-6">
+											<label for="company_name">Business Name *</label>
+											<input required class="form-control" name="company_name" id="company_name">
+										</div>
+										<div class="col-md-6">
+											<label for="project_name">Project Name *</label>
+											<input required class="form-control" name="project_name" id="project_name">
+										</div>
+									</div>
+									<!-- row 3 -->
+									<div class="row">
+										<div class="col-md-12">
+											<label for="project_description">Project Description *</label>
+											<textarea required maxlength="10000" rows="3" class="form-control" name="project_description" id="project_description"></textarea>
+										</div>
+									</div>
+									<!-- row 4 -->
+									<div class="row">
+										<div class="col-md-4">
+											<label for="department">Department</label>
+											<select class="form-control pointer" name="department" id="department">
+												<option value="">--- Select ---</option>
+												<option value="Corporate">Corporate Buildings</option>
+												<option value="Residential">Residential Buildings</option>
+												<option value="Residential">Sales</option>
+												<option value="Maintenance">Maintenance</option>
+												<option value="Maintenance">Administration</option>
+												<option value="Maintenance">General</option>
+											</select>
+										</div>
+									</div>
+									<!-- row 5 -->
+									<div class="row">
+										<div class="col-md-12">
+											<label for="message">Message</label>
+											<textarea maxlength="10000" rows="5" class="form-control" name="message" id="message"></textarea>
+										</div>
+									</div>
+									<!-- row 6 -->
+									<div class="row">
+										<div class="col-md-12">
+											<label for="attachment">File Attachment</label>
+											<!-- custom file upload -->
+											<input class="custom-file-upload" type="file" name="attachment" id="attachment" data-btn-text="Select a File" />
+											<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+										
+											<%# <%= recaptcha_tags %>
+									
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<button id="message-button" type="submit" class="btn btn-primary" value="Submit">SEND MESSAGE</button>
+										</div>
+									</div>
+								</fieldset> 
+							</form>
+						</div>
+						<!-- /FORM -->
+					</div>
+				</div>
+			</section>
+			<!-- /CONTACT -->
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container mt-0 mb-30">
+					<div class="row">
+						<!-- col #1 -->
+						<div class="col-md-7">
+							<h3 class="letter-spacing-1">WHY US?</h3>
+							<!-- Small Description -->
+							<p>
+								We have the conviction that we create the most innovative and reliable products on the market. </br>
+								Contact us today for any questions you might have.
+							</p>
+						</div>
+						<!-- /col #1 -->
+						<!-- col #2 -->
+						<div class="col-md-5">
+                            <h3>(418) 555-1234</h3>
+                            <p>
+                                <span class="block"><strong><i class="fa fa-map-marker"></i> 418-725 Boulevard Lebourgneuf, Québec, QC G2J 0C4, Canada</span>
+                                <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></span>
+                            </p>
+						</div>
+						<!-- /col #2 -->
+					</div>
+				</div>
+				<div class="copyright">
+					<div class="container">
+						&copy; All Rights Reserved
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+		</div>
+		<!-- /WRAPPER -->
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>

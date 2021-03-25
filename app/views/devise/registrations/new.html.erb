@@ -1,0 +1,125 @@
+<!-- WRAPPER -->
+<div id="wrapper">
+  <div id="header" class="navbar-toggleable-md header-md clearfix">
+
+    <!-- TOP NAV -->
+    <header id="topNav">
+      <div class="container">
+        <!-- Mobile Menu Button -->
+        <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+        <!-- Logo -->
+        <%= link_to image_tag('logo-transparent.png'), root_path, :alt=> "Rocket Elevators logo", :class => "logo
+          float-left scrollTo" %>
+
+          <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+            <nav class="nav-main">
+              <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                <li class="active">
+                  <!-- HOME -->
+                  <%= link_to "HOME" ,root_path, :id=> "home-nav" %>
+                </li>
+                <li>
+                  <div class="dropdown">
+                    <button class="nav nav-pills nav-main nav-onepage dropdown-toggle" type="button" id="services-nav"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      SERVICES
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="services-nav">
+                      <a id="services-nav" class="dropdown-item" href="index.html#services">Services</a>
+                      <div class="dropdown-divider"></div>
+                      <%= link_to "Corporate Buildings" ,pages_commercial_url, class: "dropdown-item" %>
+                      <%= link_to "Residential Buildings" ,pages_residential_url, class: "dropdown-item" %>
+                      <%= link_to "Request a Quote" ,pages_quote_url, class: "dropdown-item" %>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <!-- PORTFOLIO -->
+                  <%= link_to "PORTFOLIO" ,root_path(:anchor=> "portfolio") %>
+                </li>
+                <li>
+                  <!-- NEWS -->
+                  <%= link_to "NEWS" ,root_path(:anchor=> "news") %>
+                </li>
+                <li>
+                  <!-- CLIENTS -->
+                  <%= link_to "CLIENTS" ,root_path(:anchor=> "clients") %>
+                </li>
+                <li>
+                  <!-- CONTACT -->
+                  <%= link_to "CONTACT" ,root_path(:anchor=> "contact") %>
+                </li>
+                <% if user_signed_in? && current_user.supervisor_role? %>
+								<li><!-- LOGOUT -->
+									<%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+								</li>
+								<li><!-- ADMIN -->
+									<%= link_to "ADMIN", rails_admin_url %>
+								</li>
+                <% elsif user_signed_in? %>
+                  <li><!-- LOGOUT -->
+                    <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+                  </li>
+                <% else %>
+                  <li><!-- LOGIN -->
+                    <%= link_to "LOGIN", new_user_session_path %>
+                  </li>
+                <% end %>
+              </ul>
+
+            </nav>
+          </div>
+      </div>
+    </header>
+    <!-- /Top Nav -->
+  </div>
+
+  <section id="slider" class="fullheight">
+
+    <div class="swiper-wrapper">
+
+      <!-- SLIDE 1 -->
+     <!-- <%= image_tag 'elevator_buttons.jpeg',alt: "elevator buttons" %> -->
+        <div class="overlay dark-5" style="background-image: url(<%= image_path "elevator_buttons.jpg"%>);">
+        <div class="display-table">
+          <div class="display-table-cell vertical-align-middle">
+            <div class="container">
+
+              <div class="row">
+                <div class="text-center col-md-8 col-12 offset-md-2">
+
+
+                  <h2 style=color:white>Sign up</h2>
+
+                  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                    <%= render "devise/shared/error_messages" , resource: resource %>
+                    
+                      <div class="field" style=color:white>
+                        <%= f.label :email %>
+                        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                      </div>
+
+                      <div class="field" style=color:white>
+                        <%= f.label :password %>
+                          <% if @minimum_password_length %>
+                            <em>(<%= @minimum_password_length %> characters minimum)</em>
+                            <% end %><br />
+                              <%= f.password_field :password, autocomplete: "new-password" %>
+                      </div>
+
+                      <div class="field" style=color:white>
+                        <%= f.label :password_confirmation %>
+                          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+                      </div>
+
+                      <div class="actions">
+                        <%= f.submit "Sign up" %>
+                      </div>
+                      <% end %>
+
+                        <%= render "devise/shared/links" %>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>

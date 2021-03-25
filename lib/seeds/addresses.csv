@@ -1,0 +1,500 @@
+type_of_address,status,entity,number_and_street,suite_or_apartment,city,postal_code,country
+Billing,Active,Building,1745 T Street Southeast,,Washington,20020,USA
+Billing,Active,Building,6007 Applegate Lane,,Louisville,40219,USA
+Billing,Active,Building,560 Penstock Drive,,Grass Valley,95945,USA
+Billing,Active,Building,150 Carter Street,,Manchester,6040,USA
+Billing,Active,Building,2721 Lindsay Avenue,,Louisville,40206,USA
+Billing,Active,Building,18 Densmore Drive,,Essex,5452,USA
+Billing,Active,Building,637 Britannia Drive,,Vallejo,94591,USA
+Billing,Active,Building,5601 West Crocus Drive,,Glendale,85306,USA
+Billing,Active,Building,5403 Illinois Avenue,,Nashville,37209,USA
+Billing,Active,Building,8821 West Myrtle Avenue,,Glendale,85305,USA
+Billing,Active,Building,2203 7th Street Road,,Louisville,40208,USA
+Billing,Active,Building,6463 Vrain Street,,Arvada,80003,USA
+Billing,Active,Building,87 Horseshoe Drive,,West Windsor,5037,USA
+Billing,Active,Building,60 Desousa Drive,,Manchester,6040,USA
+Billing,Active,Building,4 Old Colony Way,,Yarmouth,2664,USA
+Billing,Active,Building,314 South 17th Street,,Nashville,37206,USA
+Billing,Active,Building,1649 Timberridge Court,,Fayetteville,72704,USA
+Billing,Active,Building,5461 West Shades Valley Drive,,Montgomery,36108,USA
+Billing,Active,Building,629 Debbie Drive,,Nashville,37076,USA
+Billing,Active,Building,22572 Toreador Drive,,Salinas,93908,USA
+Billing,Active,Building,3034 Mica Street,,Fayetteville,72704,USA
+Billing,Active,Building,3729 East Mission Boulevard,,Fayetteville,72703,USA
+Billing,Active,Building,5114 Greentree Drive,,Nashville,37211,USA
+Billing,Inactive,Building,3466 Southview Avenue,,Montgomery,36111,USA
+Billing,Inactive,Building,1513 Cathy Street,,Savannah,31415,USA
+Billing,Inactive,Building,600 West 19th Avenue,APT B,Anchorage,99503,USA
+Billing,Inactive,Building,1208 Elkader Court North,,Nashville,37013,USA
+Billing,Inactive,Building,210 Green Road,,Manchester,6042,USA
+Billing,Inactive,Building,49548 Road 200,,O'Neals,93645,USA
+Billing,Inactive,Building,81 Seaton Place Northwest,,Washington,20001,USA
+Billing,Inactive,Building,1267 Martin Street,#203,Nashville,37203,USA
+Billing,Inactive,Building,7431 Candace Way,#1,Louisville,40214,USA
+Billing,Inactive,Building,1407 Walden Court,,Crofton,21114,USA
+Billing,Inactive,Building,5906 Milton Avenue,,Deale,20751,USA
+Billing,Inactive,Building,74 Springfield Street,B,Agawam,1001,USA
+Billing,Inactive,Building,2905 Stonebridge Court,,Norman,73071,USA
+Billing,Inactive,Building,20930 Todd Valley Road,,Foresthill,95631,USA
+Billing,Inactive,Building,5928 West Mauna Loa Lane,,Glendale,85306,USA
+Billing,Inactive,Building,802 Madison Street Northwest,,Washington,20011,USA
+Billing,Inactive,Building,2811 Battery Place Northwest,,Washington,20016,USA
+Billing,Inactive,Building,210 Lacross Lane,,Westmore,5860,USA
+Billing,Inactive,Building,2010 Rising Hill Drive,,Norman,73071,USA
+Billing,Inactive,Building,388 East Main Street,,,5753,USA
+Billing,Inactive,Building,450 Kinhawk Drive,,Nashville,37211,USA
+Billing,Inactive,Building,131 Westerly Street,,Manchester,6042,USA
+Billing,Inactive,Building,308 Woodleaf Court,,Glen Burnie,21061,USA
+Billing,Inactive,Building,8502 Madrone Avenue,,Louisville,40258,USA
+Billing,Inactive,Building,23 Sable Run Lane,,Methuen,1844,USA
+Billing,Inactive,Building,716 Waller Road,,Brentwood,37027,USA
+Billing,Inactive,Building,416 McIver Street,,Nashville,37211,USA
+Billing,Inactive,Building,1508 Massachusetts Avenue Southeast,,Washington,20003,USA
+Billing,Inactive,Building,5615 West Villa Maria Drive,,Glendale,85308,USA
+Billing,Inactive,Building,3162 Martin Luther King Junior Boulevard,#2,Fayetteville,72704,USA
+Billing,Inactive,Building,5306 Ritchie Highway,,Baltimore,21225,USA
+Billing,Inactive,Building,109 Summit Street,,Burlington,5401,USA
+Billing,Inactive,Building,816 West 19th Avenue,,Anchorage,99503,USA
+Billing,Inactive,Building,172 Alburg Springs Road,,Alburgh,5440,USA
+Billing,Inactive,Building,159 Downey Drive,A,Manchester,6040,USA
+Billing,Inactive,Building,125 John Street,,Santa Cruz,95060,USA
+Billing,Inactive,Building,1101 Lotus Avenue,,Glen Burnie,21061,USA
+Billing,Inactive,Building,8376 Albacore Drive,,Pasadena,21122,USA
+Billing,Inactive,Building,491 Arabian Way,,Grand Junction,81504,USA
+Billing,Inactive,Building,12245 West 71st Place,,Arvada,80004,USA
+Billing,Inactive,Building,80 North East Street,#4,Holyoke,1040,USA
+Billing,Inactive,Building,4695 East Huntsville Road,,Fayetteville,72701,USA
+Billing,Active,Building,310 Timrod Road,,Manchester,6040,USA
+Billing,Active,Building,1364 Capri Drive,,Panama City,32405,USA
+Billing,Active,Building,132 Laurel Green Court,,Savannah,31419,USA
+Billing,Active,Building,6657 West Rose Garden Lane,,Glendale,85308,USA
+Billing,Active,Building,519 West 75th Avenue,#APT 000003,Anchorage,99518,USA
+Billing,Active,Building,31353 Santa Elena Way,,Union City,94587,USA
+Billing,Active,Building,8398 West Denton Lane,,Glendale,85305,USA
+Billing,Active,Building,700 Winston Place,,Anchorage,99504,USA
+Billing,Active,Building,232 Maine Avenue,,Panama City,32401,USA
+Billing,Active,Building,1 Kempf Drive,,Easton,2375,USA
+Billing,Active,Building,5811 Crossings Boulevard,,Nashville,37013,USA
+Billing,Active,Building,5108 Franklin Street,,Savannah,31405,USA
+Billing,Active,Building,913 Fallview Trail,,Nashville,37211,USA
+Billing,Active,Building,270 Chrissy's Court,,,5443,USA
+Billing,Active,Building,130 Old Route 103,,Chester,5143,USA
+Billing,Active,Building,10826 Pointe Royal Drive,,Bakersfield,93311,USA
+Billing,Active,Building,74 Ranch Drive,,Montgomery,36109,USA
+Billing,Active,Building,6601 West Ocotillo Road,,Glendale,85301,USA
+Billing,Active,Building,19416 Barclay Road,,Castro Valley,94546,USA
+Billing,Active,Building,1347 Blackwalnut Court,,Annapolis,21403,USA
+Billing,Active,Building,1770 Colony Way,,Fayetteville,72704,USA
+Billing,Active,Building,165 Saint John Street,,Manchester,6040,USA
+Billing,Active,Building,2409 Research Boulevard,,Fort Collins,80526,USA
+Billing,Active,Building,1903 Bashford Manor Lane,,Louisville,40218,USA
+Billing,Active,Building,8315 Surf Drive,,Panama City Beach,32408,USA
+Billing,Active,Building,3301 Old Muldoon Road,,Anchorage,99504,USA
+Billing,Active,Building,8800 Cordell Circle,#APT 000003,Anchorage,99502,USA
+Billing,Active,Building,117 East Cook Avenue,,Anchorage,99501,USA
+Billing,Active,Building,6231 North 67th Avenue,#241,Glendale,85301,USA
+Billing,Active,Building,8505 Waters Avenue,#66,Savannah,31406,USA
+Billing,Active,Building,7 Underwood Place Northwest,,Washington,20012,USA
+Billing,Active,Building,21950 Arnold Center Road,,Carson,90810,USA
+Billing,Active,Building,1427 South Carolina Avenue Southeast,,Washington,20003,USA
+Billing,Active,Building,1420 Turtleback Trail,,Panama City,32413,USA
+Billing,Active,Building,6990 Pierson Street,,Arvada,80004,USA
+Billing,Active,Building,376 North Williams Drive,,Fayetteville,72701,USA
+Billing,Active,Building,3617 Menlo Court,,Montgomery,36116,USA
+Billing,Active,Building,711 Parker Street,,East Longmeadow,1028,USA
+Billing,Active,Building,8521 Crystal Street,,Anchorage,99502,USA
+Billing,Active,Building,1622 Edgar D Nixon Avenue,,Montgomery,36104,USA
+Billing,Active,Building,1608 Gales Street Northeast,,Washington,20002,USA
+Billing,Active,Building,122 East Hayes Street,,Norman,73069,USA
+Billing,Active,Building,5144 Cattail Court,,Fayetteville,72701,USA
+Billing,Active,Building,131 Kent Drive,,Manchester,6042,USA
+Billing,Active,Building,2313 Vegas Avenue,,Castro Valley,94546,USA
+Billing,Active,Building,5420 Sunset Avenue,,Panama City Beach,32408,USA
+Billing,Active,Building,242 North Ash Street,,Fruita,81521,USA
+Billing,Active,Building,38676 Greenwich Circle,,Fremont,94536,USA
+Shipping,Active,Building,2426 East Onyx Trail,#6,Fayetteville,72701,USA
+Shipping,Active,Building,110 Seaton Place Northwest,,Washington,20001,USA
+Shipping,Active,Building,5385 Iris Street,,Arvada,80002,USA
+Shipping,Active,Building,5628 West Tonopah Drive,,Glendale,85308,USA
+Shipping,Active,Building,65 Bay Drive,,Annapolis,21403,USA
+Shipping,Active,Building,7401 North 61st Drive,,Glendale,85301,USA
+Shipping,Active,Building,8 Watkins Road,,,5468,USA
+Shipping,Active,Building,2209 June Drive,,Nashville,37214,USA
+Shipping,Active,Building,1840 Nobel Place,,Louisville,40216,USA
+Shipping,Active,Building,2622 Martin Luther King Junior Boulevard,,Fayetteville,72704,USA
+Shipping,Active,Building,4 Glen Circle,,Glen Burnie,21060,USA
+Shipping,Active,Building,7529 West 72nd Avenue,#4,Arvada,80003,USA
+Shipping,Active,Building,10996 Largo Drive,,Savannah,31419,USA
+Shipping,Active,Building,2027 North Shannon Drive,#5,Fayetteville,72703,USA
+Shipping,Active,Building,154 Boca Lagoon Drive,,Panama City Beach,32408,USA
+Shipping,Active,Building,3311 Wiley Post Loop,,Anchorage,99517,USA
+Shipping,Active,Building,5055 West 58th Avenue,,Arvada,80002,USA
+Shipping,Active,Building,3228 Chettenham Drive,,Rancho Cordova,95670,USA
+Shipping,Active,Building,1901 North Midwest Boulevard,,Edmond,73034,USA
+Shipping,Active,Building,1536 North Main Street,,Salinas,93906,USA
+Shipping,Active,Building,33 Linscott Road,,Hingham,2043,USA
+Shipping,Active,Building,1732 27th Avenue,,Oakland,94601,USA
+Shipping,Active,Building,22 Gallatin Street Northeast,,Washington,20011,USA
+Shipping,Active,Building,8125 Glynnwood Drive,,Montgomery,36117,USA
+Shipping,Active,Building,2139 Glynnwood Drive,,Savannah,31404,USA
+Shipping,Active,Building,14 School Street,,Medway,2053,USA
+Shipping,Active,Building,264 Crest Drive,,Soldotna,99669,USA
+Shipping,Active,Building,307 Joel Street,,Pooler,31322,USA
+Shipping,Active,Customer,188 River Road,,Essex,5452,USA
+Shipping,Active,Customer,1643 Oxford Street,R C,Berkeley,94709,USA
+Shipping,Active,Customer,5545 Saddlewood Lane,,Brentwood,37027,USA
+Shipping,Active,Customer,26466 Mockingbird Lane,,Hayward,94544,USA
+Shipping,Active,Customer,4840 Reservoir Road Northwest,,Washington,20007,USA
+Shipping,Active,Customer,599 Cambridge Street,#303,Cambridge,2141,USA
+Shipping,Active,Customer,584 Rural Hill Road,,Nashville,37217,USA
+Shipping,Active,Customer,10262 West 59th Avenue,#1,Arvada,80004,USA
+Shipping,Active,Customer,945 South 5th Street,#1020,Louisville,40203,USA
+Shipping,Active,Customer,2543 The Meadows,,Montgomery,36116,USA
+Shipping,Active,Customer,153 Atlantic Avenue,#6,Salisbury,1952,USA
+Shipping,Active,Customer,9 Brooklyn Street,,,5488,USA
+Shipping,Active,Customer,5722 8th Street Northwest,,Washington,20011,USA
+Shipping,Active,Customer,8700 Seaton Boulevard,,Montgomery,36116,USA
+Shipping,Active,Customer,1004 Bellflower Street,,Livermore,94551,USA
+Shipping,Active,Customer,4738 Mallard Common,,Fremont,94555,USA
+Shipping,Active,Customer,875 Latouche Street,#APT 001010,Anchorage,99501,USA
+Shipping,Active,Customer,4940 Fuller Road,,Montgomery,36110,USA
+Shipping,Active,Customer,5754 Belleau Drive,,Montgomery,36117,USA
+Shipping,Active,Customer,1403 Lincoln Street,,Savannah,31401,USA
+Shipping,Active,Customer,140 South Hill Avenue,#305,Fayetteville,72701,USA
+Shipping,Active,Customer,642 South 2nd Street,#608,Louisville,40202,USA
+Shipping,Inactive,Customer,6473 Zephyr Street,,Arvada,80004,USA
+Shipping,Inactive,Customer,4250 North Valley Lake Drive,#8,Fayetteville,72703,USA
+Shipping,Inactive,Customer,565 North Lakeshore Drive,,Panama City Beach,32413,USA
+Shipping,Inactive,Customer,5514 West Wedington Drive,#3,Fayetteville,72704,USA
+Shipping,Inactive,Customer,1909 Wainwright Avenue,,Panama City,32405,USA
+Shipping,Inactive,Customer,4525 West Frier Drive,,Glendale,85301,USA
+Shipping,Inactive,Customer,201 West Montgomery Cross Road,#170,Savannah,31406,USA
+Shipping,Inactive,Customer,915 Heath Drive,,Montgomery,36108,USA
+Shipping,Inactive,Customer,95 Briarwood Drive,,Manchester,6040,USA
+Shipping,Inactive,Customer,69 Washington Street,,Manchester,6042,USA
+Shipping,Inactive,Customer,2900 North Western Avenue,,Edmond,73012,USA
+Shipping,Inactive,Customer,7841 West Kristal Way,,Glendale,85308,USA
+Shipping,Inactive,Customer,361 Parmley Lane,,Nashville,37207,USA
+Shipping,Inactive,Customer,6120 Southeast 84th Street,,Oklahoma City,73135,USA
+Shipping,Inactive,Customer,9428 North 65th Drive,,Glendale,85302,USA
+Shipping,Inactive,Customer,11 Meeting Place Circle,,Boxford,1921,USA
+Shipping,Inactive,Customer,4438 Maine Avenue,,Baldwin Park,91706,USA
+Shipping,Inactive,Customer,65 Jones Lane,,Montevallo,35115,USA
+Shipping,Inactive,Customer,3140 Commander Drive,,Louisville,40220,USA
+Shipping,Inactive,Customer,107 Guaymas Place,,Davis,95616,USA
+Shipping,Inactive,Customer,6114 West Glenn Drive,#1,Glendale,85301,USA
+Shipping,Inactive,Customer,622 Thomas Street,,Woodland,95776,USA
+Shipping,Inactive,Customer,127 Grand Heron Drive,,Panama City,32407,USA
+Shipping,Inactive,Customer,3504 East 16th Avenue,,Anchorage,99508,USA
+Shipping,Inactive,Customer,1230 Stafford Drive,,Montgomery,36117,USA
+Shipping,Inactive,Customer,6007 Yarrow Street,H,Arvada,80004,USA
+Shipping,Inactive,Customer,632 Belmar Drive,,Edmond,73025,USA
+Shipping,Inactive,Customer,1515 Chandlee Avenue,,Panama City,32405,USA
+Shipping,Inactive,Customer,10632 Admiral Court,,Oklahoma City,73162,USA
+Shipping,Inactive,Customer,11655 West 81st Avenue,,Arvada,80005,USA
+Shipping,Inactive,Customer,3500 Blanchard Drive Southwest,,Washington,20032,USA
+Shipping,Inactive,Customer,2755 Country Drive,#244,Fremont,94536,USA
+Shipping,Inactive,Customer,1850 Berryhill Place,,Montgomery,36117,USA
+Shipping,Inactive,Customer,58 North U.S.A Drive,,Fayetteville,72701,USA
+Shipping,Inactive,Customer,8785 Ellis Court,,Arvada,80005,USA
+Shipping,Inactive,Customer,1636 Briarview Court,,Severn,21144,USA
+Shipping,Inactive,Customer,12 Knox Street,,Manchester,6040,USA
+Shipping,Inactive,Customer,425 Middle Turnpike East,,Manchester,6040,USA
+Shipping,Inactive,Customer,2017 North Hartford Drive,,Fayetteville,72701,USA
+Shipping,Inactive,Customer,5900 Upland Road,,Brooklyn Park,21225,USA
+Shipping,Inactive,Customer,9331 Edison Road,,Lithia,33547,USA
+Shipping,Inactive,Customer,1810 Orchard Place,,Anchorage,99502,USA
+Shipping,Inactive,Customer,145 Grau Drive,,Fremont,94536,USA
+Shipping,Inactive,Customer,3959 Fairlands Drive,,Pleasanton,94588,USA
+Shipping,Inactive,Customer,3613 East 18th Avenue,,Anchorage,99508,USA
+Shipping,Inactive,Customer,1275 South Holland Drive,,Fayetteville,72704,USA
+Shipping,Inactive,Customer,109 Cambridge Station Road,,Louisville,40223,USA
+Shipping,Inactive,Customer,2107 Elfen Glen,Apt B,Van Buren,72956,USA
+Shipping,Inactive,Customer,8522 Ingalls Circle,,Arvada,80003,USA
+Shipping,Inactive,Customer,1809 Cedar Drive,,Severn,21144,USA
+Shipping,Inactive,Customer,1376 Oakland Avenue,#1,Fayetteville,72703,USA
+Shipping,Inactive,Customer,4306 Bylsma Circle,,Panama City,32404,USA
+Shipping,Inactive,Customer,233 Buckland Hills Drive,,Manchester,6042,USA
+Shipping,Inactive,Customer,7701 Southwest 104th Street,,Oklahoma City,73169,USA
+Shipping,Inactive,Customer,14003 Crossbranch Court,,Louisville,40245,USA
+Shipping,Inactive,Customer,19590 East Batavia Drive,,Aurora,80011,USA
+Shipping,Inactive,Customer,6424 Simms Street,#71,Arvada,80004,USA
+Shipping,Inactive,Customer,718 Dutchmans Court,,Nashville,37076,USA
+Shipping,Inactive,Customer,8496 Isles Court,,Pasadena,21122,USA
+Shipping,Inactive,Customer,100 East Joyce Boulevard,#110,Fayetteville,72703,USA
+Shipping,Inactive,Customer,9036 Calico Court,,Hesperia,92344,USA
+Shipping,Inactive,Customer,2723 East Joyce Boulevard,,Fayetteville,72703,USA
+Shipping,Inactive,Customer,90 Via Verde,,San Lorenzo,94580,USA
+Shipping,Inactive,Customer,1015 Castle Road,,Edmond,73034,USA
+Shipping,Inactive,Customer,2787 West Blackstone Crossing,,Fayetteville,72704,USA
+Shipping,Inactive,Customer,3555 Alamosa Drive,,Anchorage,99502,USA
+Shipping,Inactive,Customer,6231 North 59th Avenue,#35,Glendale,85301,USA
+Shipping,Inactive,Customer,311 South Panama Street,,Montgomery,36107,USA
+Shipping,Inactive,Customer,3313 Daisy Trail,,Nashville,37013,USA
+Shipping,Inactive,Customer,5436 Dorbrandt Street,#APT 000002,Anchorage,99518,USA
+Shipping,Inactive,Customer,553 South Arlington Road,,Orange,92869,USA
+Shipping,Inactive,Customer,615 Q Street Northwest,,Washington,20001,USA
+Shipping,Inactive,Customer,457 Mountain Village Boulevard,#320-3,Mountain Village,81435,USA
+Shipping,Active,Customer,144 Lauderdale Street,,Montgomery,36116,USA
+Shipping,Active,Customer,2 Ambelwood Way,,Savannah,31411,USA
+Shipping,Active,Building,4113 Holiday Drive,,Panama City,32408,USA
+Shipping,Active,Building,2001 Van Hoose Drive,,Fayetteville,72701,USA
+Shipping,Active,Building,9457 Winfield Place,,Montgomery,36117,USA
+Shipping,Active,Building,1120 Mitchell Young Road,,Montgomery,36108,USA
+Business,Active,Building,12816 West 65th Way,,Arvada,80004,USA
+Business,Active,Building,10 Erick Road,#47,Mansfield,2048,USA
+Business,Active,Building,481 East Redbud Lane,,Fayetteville,72703,USA
+Business,Active,Building,320 Northwest 22nd Street,,Oklahoma City,73103,USA
+Business,Active,Building,33 South Hill Avenue,#306,Fayetteville,72701,USA
+Business,Active,Building,355 Gillette Road,,Nashville,37211,USA
+Business,Active,Building,151 Main Street,,Savannah,31408,USA
+Business,Active,Building,545 Tracey Drive,,Panama City,32404,USA
+Business,Active,Building,3 Southerberry Drive,,,5468,USA
+Business,Active,Building,736 Sicard Street Southeast,,Washington,20003,USA
+Business,Active,Building,6214 Herzog Street,,Oakland,94608,USA
+Business,Active,Building,1160 North College Avenue,#2,Fayetteville,72703,USA
+Business,Active,Building,5843 West McLellan Road,,Glendale,85301,USA
+Business,Active,Building,1452 55th Avenue,B,Oakland,94621,USA
+Business,Active,Building,4255 Tanager Common,,Fremont,94555,USA
+Business,Active,Building,13426 West Rovey Avenue,,Litchfield Park,85340,USA
+Business,Active,Building,195 Nursery Street,#D10,Springfield,1104,USA
+Business,Active,Building,126 Marjorie Lane,C,Manchester,6042,USA
+Business,Active,Building,22 Charnock Street,#2,Beverly,1915,USA
+Business,Active,Building,817 25th Street Northwest,,Washington,20037,USA
+Business,Active,Building,2552 Massachusetts Avenue Northwest,,Washington,20008,USA
+Business,Active,Building,1711 Lore Road,#APT 000106,Anchorage,99507,USA
+Business,Active,Building,19091 Northeast 23rd Street,,Harrah,73045,USA
+Business,Active,Building,8318 North 57th Drive,,Glendale,85302,USA
+Business,Active,Building,7256 West 84th Way,#918,Arvada,80003,USA
+Business,Active,Building,706 Seagrove Road,,Glen Burnie,21060,USA
+Business,Active,Building,2318 Camryns Crossing,,Panama City,32405,USA
+Business,Active,Building,968 Virginia Avenue,,Olivehurst,95961,USA
+Business,Active,Building,416 South University Boulevard,,Norman,73069,USA
+Business,Active,Building,137 Gazebo East Drive,,Montgomery,36117,USA
+Business,Active,Building,10723 Colonial Woods Court,,Louisville,40223,USA
+Business,Active,Building,119 Matthew Lane,,Nashville,37215,USA
+Business,Active,Building,3142 West Finger Road,,Fayetteville,72701,USA
+Business,Active,Building,4 Elm Street,,Windsor,5089,USA
+Business,Active,Building,78 School Street,,Woburn,1801,USA
+Business,Active,Building,19020 North 68th Avenue,,Glendale,85308,USA
+Business,Active,Building,2849 Quail Drive,,Fayetteville,72704,USA
+Business,Active,Building,2456 22nd Avenue,,Greeley,80631,USA
+Business,Active,Building,200 Boulder Road,,Manchester,6040,USA
+Business,Active,Building,11150 Sun Valley Drive,,Oakland,94605,USA
+Business,Active,Building,505 Southeast 32nd Street,,Oklahoma City,73129,USA
+Business,Active,Building,1025 West 19th Street,#UNIT 1-C,Panama City,32405,USA
+Business,Active,Building,6725 Pamela Court,,Montgomery,36116,USA
+Business,Active,Building,4714 Narrow Lane Road,,Montgomery,36116,USA
+Business,Active,Building,11 Proctor Circle,,Peabody,1960,USA
+Business,Active,Building,10508 Kovats Court,,Louisville,40223,USA
+Business,Active,Building,3179 18th Street Northwest,,Washington,20010,USA
+Business,Active,Building,3194 Bladensburg Road Northeast,,Washington,20018,USA
+Business,Active,Building,260 Rio Del Mar Boulevard,##14,Aptos,95003,USA
+Business,Active,Building,1040 West 27th Avenue,#APT 000401,Anchorage,99503,USA
+Business,Active,Building,42 Lake Lane,,Westmore,5860,USA
+Business,Active,Building,3718 Bay Tree Road,,Lynn Haven,32444,USA
+Business,Active,Building,3408 Bellisima Place,#204,Louisville,40245,USA
+Business,Active,Building,4109 General Bate Drive,,Nashville,37204,USA
+Business,Active,Building,5329 A Street,,Greeley,80634,USA
+Business,Active,Building,88 Shute Street,#1,Everett,2149,USA
+Business,Active,Building,480 Keene Road,,Walden,5836,USA
+Business,Active,Building,4 Cutting Avenue,,Worcester,1606,USA
+Business,Active,Building,275 South 40th Street,,Boulder,80305,USA
+Business,Active,Building,1189 Northwest End Avenue,#D3,Fayetteville,72703,USA
+Business,Inactive,Building,25 Cliffside Drive,D,Manchester,6042,USA
+Business,Inactive,Building,2515 60th Avenue,,Oakland,94605,USA
+Business,Inactive,Building,2057 Lucas Street,,Montgomery,36107,USA
+Business,Inactive,Building,386 Daniels Road,,New Haven,5472,USA
+Business,Inactive,Building,9805 Meadow Vale Drive,,Louisville,40242,USA
+Business,Inactive,Building,8 Village Circle,,Randolph,5060,USA
+Business,Inactive,Building,1011 San Jose Street,,San Leandro,94577,USA
+Business,Inactive,Building,2505 Walker Lane,,Nashville,37207,USA
+Business,Inactive,Building,11225 West 79th Drive,,Arvada,80005,USA
+Business,Inactive,Building,1907 18th Avenue South,,Nashville,37212,USA
+Business,Inactive,Building,16 Conway Street,,Shelburne Falls,1370,USA
+Business,Inactive,Building,20375 Wisteria Street,,Castro Valley,94546,USA
+Business,Inactive,Building,6408 Fern Crest Road,,Louisville,40291,USA
+Business,Inactive,Building,175 Creek Road,,Castleton,5735,USA
+Business,Inactive,Building,2531 Prestwick Avenue,,Concord,94519,USA
+Business,Inactive,Building,1002 Highland Avenue,,Louisville,40204,USA
+Business,Inactive,Building,2927 Leatherwood Drive,,Nashville,37214,USA
+Business,Inactive,Building,8467 Chase Drive,,Arvada,80003,USA
+Business,Inactive,Building,8556 Nelson Court,,Arvada,80005,USA
+Business,Inactive,Building,122 Summer Street,#1,Medford,2155,USA
+Business,Inactive,Building,12061 Johns Road,#APT 000002,Anchorage,99515,USA
+Business,Inactive,Building,8358 WB&A Road,,Severn,21144,USA
+Business,Inactive,Building,43 Henderson Avenue,,Savannah,31406,USA
+Business,Inactive,Building,347 Brewer Drive,,Nashville,37211,USA
+Business,Inactive,Building,2765 North Barcelona Avenue,,Fayetteville,72703,USA
+Business,Inactive,Building,5311 Chenoweth Park Lane,,Louisville,40291,USA
+Business,Inactive,Building,6398 Jellison Way,,Arvada,80004,USA
+Business,Inactive,Building,604 Northwest 118th Street,,Oklahoma City,73114,USA
+Business,Inactive,Building,37 Rushforde Drive,,Manchester,6040,USA
+Business,Inactive,Building,5434 West Beck Lane,,Glendale,85306,USA
+Business,Inactive,Building,1516 Ringe Drive,,Severn,21144,USA
+Business,Inactive,Building,3701 Lake Towne Drive,,Nashville,37013,USA
+Business,Inactive,Building,20250 North 67th Avenue,#2143,Glendale,85308,USA
+Business,Inactive,Building,62 Prospect Avenue,#1,Quincy,2170,USA
+Business,Inactive,Building,25 Morton Street,#216,Quincy,2169,USA
+Business,Inactive,Building,8202 4 Winds Drive,#3,Lyndon,40222,USA
+Business,Inactive,Building,513 Habberton Road,,Fayetteville,72703,USA
+Business,Inactive,Building,1960 Sigfrid Court,,Annapolis,21401,USA
+Business,Inactive,Customer,663 Chesapeake Way,#1,Fayetteville,72701,USA
+Business,Inactive,Customer,3354 Wilmington Road,,Montgomery,36105,USA
+Business,Inactive,Customer,8529 Old Harding Lane,,Nashville,37221,USA
+Business,Inactive,Customer,22219 Panama City Beach Parkway,,Panama City Beach,32413,USA
+Business,Inactive,Customer,37 East Broad Street,,Savannah,31401,USA
+Business,Inactive,Customer,1309 Columbia Road Northwest,,Washington,20009,USA
+Business,Inactive,Customer,1211 Castine Court,,Pasadena,21122,USA
+Business,Inactive,Customer,906 West Berry Street,#204,Fayetteville,72701,USA
+Business,Inactive,Customer,341 Oakland Street,,Manchester,6042,USA
+Business,Inactive,Customer,60 Downey Drive,,Manchester,6040,USA
+Business,Inactive,Customer,3770 North Front Street,,Fayetteville,72703,USA
+Business,Inactive,Customer,25 Church Street,A,Pittsfield,1201,USA
+Business,Inactive,Customer,6578 Marauder Drive,,Nashville,37209,USA
+Business,Inactive,Customer,2747 68th Avenue,,Oakland,94605,USA
+Business,Inactive,Customer,95 Woods Hill Road,,,5488,USA
+Business,Inactive,Customer,35 Keach Avenue,,Worcester,1607,USA
+Business,Inactive,Customer,1822 North Grand Avenue,,Pueblo,81003,USA
+Business,Inactive,Customer,1809 U.S. 80,,Savannah,31408,USA
+Business,Inactive,Customer,5065 North 54th Avenue,#8,Glendale,85301,USA
+Business,Inactive,Customer,1261 Steamboat Drive,#3,Fayetteville,72704,USA
+Business,Inactive,Customer,1695 Archer Street,,Savannah,31405,USA
+Business,Inactive,Customer,3904 October Woods Drive,,Nashville,37013,USA
+Business,Inactive,Customer,1223 Delaware Avenue,,Deale,20733,USA
+Business,Inactive,Customer,10383 Eagle River Lane,,Anchorage,99577,USA
+Business,Inactive,Customer,1314 89th Avenue,,Oakland,94621,USA
+Business,Inactive,Customer,21 Longview Bluff Drive East,,Savannah,31419,USA
+Business,Inactive,Customer,1689 Fisher Pond Road,,Saint Albans City,5478,USA
+Business,Inactive,Customer,9920 West 81st Avenue,,Arvada,80005,USA
+Business,Inactive,Customer,2732 Rosedale Place,,Nashville,37211,USA
+Business,Inactive,Customer,10881 Northforde Drive,,Cupertino,95014,USA
+Business,Inactive,Customer,926 Mill Court,,Savannah,31419,USA
+Business,Inactive,Customer,7550 Kline Drive,,Arvada,80005,USA
+Business,Inactive,Customer,5688 Johnson Court,,Arvada,80002,USA
+Business,Inactive,Customer,4439 Gale Street,,Livermore,94550,USA
+Business,Active,Customer,6450 West Bethany Home Road,,Glendale,85301,USA
+Business,Active,Customer,2931 Shady Oaks Drive,,Evans,80620,USA
+Business,Active,Customer,6451 West Bell Road,#1144,Glendale,85308,USA
+Business,Active,Customer,644 West Maple Street,#2,Fayetteville,72701,USA
+Business,Active,Customer,1219 North Storer Avenue,#66,Fayetteville,72703,USA
+Business,Active,Customer,152 Holly Court,,Mountain View,94043,USA
+Business,Active,Customer,6086 Kennedy Drive,,Fayetteville,72704,USA
+Business,Active,Customer,2300 Deer Path Circle,#207,Hurstbourne Acres,40220,USA
+Business,Active,Customer,802 East 37th Street,,Savannah,31401,USA
+Business,Active,Customer,5821 Taft Street,,Arvada,80004,USA
+Business,Active,Customer,188 Saint Matthews Avenue,#1,Louisville,40207,USA
+Business,Active,Customer,68 Hampstead Place,,Athol,1331,USA
+Business,Active,Customer,3164 West Woodfield Way,,Fayetteville,72704,USA
+Business,Active,Customer,7998 Chase Circle,#1,Arvada,80003,USA
+Business,Active,Customer,1797 Pasatiempo Drive,,Chico,95928,USA
+Business,Active,Customer,3722 Kisling Loop,,Tyndall Air Force Base,32403,USA
+Business,Active,Customer,429 Patterson Street,,Nashville,37211,USA
+Business,Active,Customer,6140 Fenton Street,,Arvada,80003,USA
+Business,Active,Customer,7404 West Crest Lane,,Glendale,85310,USA
+Business,Active,Customer,7841 North 59th Lane,#G37,Glendale,85301,USA
+Business,Active,Customer,8043 Cranberry Street,#APT 000001,Anchorage,99502,USA
+Business,Active,Customer,173 Spruce Street,#18,Manchester,6040,USA
+Business,Active,Customer,4712 Cherokee Heights Road,,Panama City,32404,USA
+Business,Active,Customer,915 Sacramento Street,,Bakersfield,93305,USA
+Business,Active,Customer,317 Windsor Road,,Savannah,31419,USA
+Business,Active,Customer,1332 Maple Street,,Montgomery,36108,USA
+Business,Active,Customer,4709 Blagden Terrace Northwest,,Washington,20011,USA
+Business,Active,Customer,5102 Ander Drive,,Brentwood,37027,USA
+Business,Active,Customer,6754 Field Street,,Arvada,80004,USA
+Business,Active,Customer,2347 Glen Eagle Drive,,Northfield,40222,USA
+Business,Active,Customer,1613 Maple Timber Court,,Nashville,37013,USA
+Business,Active,Customer,269 Park Street,#1,North Reading,1864,USA
+Business,Active,Building,6444 North 67th Avenue,#1081,Glendale,85301,USA
+Business,Active,Building,11 Pine Point Road,,Duxbury,2332,USA
+Business,Active,Building,4136 East Virginia Lane,,Montgomery,36116,USA
+Business,Active,Building,5740 North 59th Avenue,#1156,Glendale,85301,USA
+Business,Active,Building,95 Central Street,A,Springfield,1105,USA
+Business,Active,Building,74 Heard Street,#1,Chelsea,2150,USA
+Business,Active,Building,2500 Snowdoun Chambers Road,,Montgomery,36105,USA
+Business,Active,Building,429 Dennison Ridge Drive,,Manchester,6040,USA
+Business,Active,Building,1208 Lindenwood Drive,,Panama City,32405,USA
+Business,Active,Building,7609 Doris Place,,Oklahoma City,73162,USA
+Business,Active,Building,1915 Southeast 29th Street,,Oklahoma City,73129,USA
+Business,Active,Building,212 Holiday Circle,,Savannah,31419,USA
+Business,Active,Building,32 Amsden Street,#1,Arlington,2474,USA
+Home,Active,Building,4016 Doane Street,,Fremont,94538,USA
+Home,Active,Building,8700 Lillington Circle,,Montgomery,36117,USA
+Home,Active,Building,7720 Allison Street,#105,Arvada,80005,USA
+Home,Active,Building,17878 Front Beach Road,#C-2,Panama City Beach,32413,USA
+Home,Active,Building,1328 Tuckerman Street Northwest,,Washington,20011,USA
+Home,Active,Building,4600 East Huntsville Road,,Fayetteville,72701,USA
+Home,Active,Building,5038 North Cimarron Drive,,Beverly Hills,34465,USA
+Home,Active,Building,1216 West Hill Street,M,Louisville,40210,USA
+Home,Active,Building,3033 Aubert Avenue,,Louisville,40206,USA
+Home,Active,Building,17020 West 64th Drive,,Arvada,80007,USA
+Home,Active,Building,12420 West Montebello Avenue,,Litchfield Park,85340,USA
+Home,Active,Building,2538 East 40th Plaza,,Panama City,32405,USA
+Home,Active,Building,827 10th Street Northeast,,Washington,20002,USA
+Home,Inactive,Building,5912 North 48th Avenue,,Glendale,85301,USA
+Home,Inactive,Building,37 Fieldside Drive,,Groton,6340,USA
+Home,Inactive,Building,9176 Ellis Way,,Arvada,80005,USA
+Home,Inactive,Building,5370 Business Park Drive,,Montgomery,36116,USA
+Home,Inactive,Building,1612 Beech Street,,Louisville,40211,USA
+Home,Inactive,Building,8532 Ingalls Circle,,Arvada,80003,USA
+Home,Inactive,Building,7941 Alpine View Circle,,Anchorage,99507,USA
+Home,Inactive,Building,8595 West 81st Drive,,Arvada,80005,USA
+Home,Inactive,Building,4296 North Blossom Court,,Fayetteville,72703,USA
+Home,Inactive,Building,1738 Annabellas Drive,,Panama City Beach,32407,USA
+Home,Inactive,Building,3215 Madsen Street,,Hayward,94541,USA
+Home,Inactive,Building,4 Village Lake Drive,#4,Fayetteville,72703,USA
+Home,Inactive,Building,86 Russell Street,,Manchester,6040,USA
+Home,Inactive,Building,570 Broadway,,Lynnfield,1940,USA
+Home,Inactive,Building,1405 Monroe Street Northeast,,Washington,20017,USA
+Home,Inactive,Building,900 North Leverett Avenue,#126,Fayetteville,72701,USA
+Home,Inactive,Building,222 Quince Street,#2-B,San Diego,92103,USA
+Home,Inactive,Building,370 Wallace Road,#D-28,Nashville,37211,USA
+Home,Inactive,Building,6672 Urban Court,,Arvada,80004,USA
+Home,Inactive,Building,516 Southwest 60th Terrace,,Oklahoma City,73139,USA
+Home,Inactive,Building,1513 Southeast 9th Street,,Moore,73160,USA
+Home,Inactive,Building,154 Byrd Drive,,Panama City,32404,USA
+Home,Inactive,Building,1106 Homer Avenue,,Savannah,31405,USA
+Home,Inactive,Building,1010 M Street Northwest,,Washington,20001,USA
+Home,Inactive,Building,5420 Allison Street,#202,Arvada,80002,USA
+Home,Inactive,Building,20 Hacker Street,#3,Worcester,1603,USA
+Home,Inactive,Building,732 Kevin Court,,Oakland,94621,USA
+Home,Inactive,Building,509 Franklin Street Northeast,,Washington,20017,USA
+Home,Inactive,Building,23 Whitcomb Street,,Springfield,5156,USA
+Home,Inactive,Building,3377 Sandstone Court,,Pleasanton,94588,USA
+Home,Inactive,Building,14 Huntington Street,,Manchester,6040,USA
+Home,Inactive,Building,2802 US Highway 98,BLDG F,Mexico Beach,32456,USA
+Home,Inactive,Building,412 Virginia Avenue,,Louisville,40222,USA
+Home,Inactive,Building,1644 New Jersey Avenue Northwest,,Washington,20001,USA
+Home,Inactive,Building,832 51st Street Northeast,,Washington,20019,USA
+Home,Inactive,Building,894 Windmill Park Lane,,Mountain View,94043,USA
+Home,Inactive,Building,9636 Morar Road,,Panama City,32409,USA
+Home,Inactive,Building,9472 Noble Way,,Arvada,80007,USA
+Home,Inactive,Building,618 Staley Avenue,,Hayward,94541,USA
+Home,Inactive,Building,8704 Bayberry Place,,Plantation,40242,USA
+Home,Inactive,Building,2506 West Madison Street,,Louisville,40211,USA
+Home,Inactive,Building,840 Inglewood Drive,,West Sacramento,95605,USA
+Home,Inactive,Building,10 Dalry Lane,,Savannah,31419,USA
+Home,Inactive,Building,3301 Nora Lane,,Louisville,40220,USA
+Home,Inactive,Building,8304 Glaser Lane,,Louisville,40291,USA
+Home,Inactive,Building,3720 West 86th Avenue,APT F,Anchorage,99502,USA
+Home,Inactive,Building,3298 Chestnut Street Northwest,,Washington,20015,USA
+Home,Inactive,Building,82 Fairfield Street,,Manchester,6040,USA
+Home,Inactive,Building,3138 P Street Northwest,,Washington,20007,USA
+Home,Inactive,Customer,80 Locust Avenue,#110,Worcester,1604,USA
+Home,Inactive,Customer,2715 Thornbrook Court,,Odenton,21113,USA
+Home,Inactive,Customer,3579 2nd Avenue,,Edgewater,21037,USA
+Home,Inactive,Customer,6739 Taft Court,,Arvada,80004,USA
+Home,Inactive,Customer,1528 Stafford Avenue,,Hayward,94541,USA
+Home,Inactive,Customer,2024 Merrily Drive,,Montgomery,36111,USA
+Home,Inactive,Customer,2034 Fairfax Road,,Annapolis,21401,USA
+Home,Inactive,Customer,1430 East Audubon Road,,Montgomery,36111,USA
+Home,Inactive,Customer,3652 East Blue Stone Drive,,Fayetteville,72764,USA
+Home,Inactive,Customer,3302 Woodland Park Drive,#APT 000001,Anchorage,99517,USA
+Home,Inactive,Customer,1771 Daisey Court,,Millersville,21108,USA
+Home,Inactive,Customer,406 East Waldburg Street,,Savannah,31401,USA
+Home,Inactive,Customer,11843 North 60th Avenue,,Glendale,85304,USA
+Home,Inactive,Customer,9515 West 74th Avenue,,Arvada,80005,USA
+Home,Inactive,Customer,119 Antioch Pike,,Nashville,37211,USA
+Home,Inactive,Customer,1157 1st Street Northwest,,Washington,20001,USA
+Home,Inactive,Customer,3578 Galindo Street,,Oakland,94601,USA
+Home,Inactive,Customer,12800 Saunders Road,,Anchorage,99516,USA
