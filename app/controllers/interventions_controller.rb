@@ -97,9 +97,7 @@ class InterventionsController < ApplicationController
                     @intervention.column_id = nil
                     @intervention.battery_id = nil
                     @intervention.elevator_id = elevator
-                end
-               
-            
+                end  
 
         # employee = employee.find_by(current_user.id)
             
@@ -146,10 +144,6 @@ class InterventionsController < ApplicationController
                 :type => "problem"
             )
         end 
-
-        # Column ID: #{@intervention.column_id}\n and Elevator ID:#{@intervention.elevator_id}\n need intervention asap. Employee: #{@intervention.employee_id}\n is required to go there. Here are more datils Description: #{@intervention.report}
-
-
 
     
     def show
