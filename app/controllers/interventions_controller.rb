@@ -134,7 +134,7 @@ class InterventionsController < ApplicationController
                         Battery ID: #{params[:battery]}\n
                         Column ID: #{if (params[:column] == "None") then "" else params[:column] end} 
                         Elevators ID: #{if (params[:elevator] == "None" ) then "" else params[:elevator] end}
-                        #{if (@intervention.employee_id) then "The Assigned Technician:#{@intervention.employee.first_name} #{@intervention.employee.last_name}" end}
+                        #{if (@intervention.employee_id) then "The Assigned Technician: #{@intervention.employee.first_name} #{@intervention.employee.last_name}" end}
                         
                         Description:#{@intervention.report}"
                 }, 
