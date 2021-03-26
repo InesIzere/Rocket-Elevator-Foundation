@@ -132,18 +132,20 @@ class InterventionsController < ApplicationController
                     The Customer Name: #{@intervention.customer.company_name}\n
                         Building ID: #{@intervention.building_id}\n
                         Battery ID: #{params[:battery]}\n
-                        Column ID: #{if (params[:column] == "None")then "" else params[:column] end} 
+                        Column ID: #{if (params[:column] == "None") then "" else params[:column] end} 
                         Elevators ID: #{if (params[:elevator] == "None" ) then "" else params[:elevator] end}
-                        Assigned Technician: #{@intervention.employee.first_name} #{@intervention.employee.last_name}
+                        #{if (@intervention.employee_id) then "The Assigned Technician:#{@intervention.employee.first_name} #{@intervention.employee.last_name}" end}
+                        
                         Description:#{@intervention.report}"
                 }, 
                 :requester => { 
-                    "name": Employee.find(@intervention.author_id).first_name+"   "+Employee.find(@intervention.author_id).last_name,  
+                    "name": Employee.find(@intervention.author_id).first_name+''+Employee.find(@intervention.author_id).last_name 
                 },
-                :priority => "normal",
-                :type => "problem"
+                
+                :type => "problem",
+                :priority => "normal"
             )
-        end 
+    end 
 
     
     def show

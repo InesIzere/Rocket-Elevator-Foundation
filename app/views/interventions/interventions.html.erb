@@ -1,9 +1,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <%= javascript_include_tag "intervention.js" %>
-    <!-- WRAPPER -->
-	<div id="wrapper">
 
-			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+	<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
         <!-- TOP NAV -->
         <header id="topNav">
@@ -65,99 +64,109 @@
             </div>
         </header>
         <!-- /Top Nav -->
-</div>
+	</div>
 
 
 			<!-- INTRO -->
+			
+			 <div id="home" class="fullwidthbanner" data-delay="0" data-height="600" data-shadow="0" data-navigationStyle="preview2">
+					<ul class="hide">
+						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off"  data-title="Our Values">
+							<!-- MAIN IMAGE -->
+							<img src="/assets/intervention.jpg"  alt="cover image"  data-bgposition="center" data-bgfit="cover" data-bgrepeat="no-repeat">
+						</li>
+					</ul>
+				</div>
 			
             <hr class="m-0" /><!-- 1px line separator -->
             
 			<button class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
 				<span class="font-lato fs-30">
-                    <strong>Please Fill Out The Intervention Form</strong>
+                    <strong>Please Fill Out Intervention Fom</strong>
 				</span>
 			</button>
             <!-- INTRO -->
-            
+
+     <!-- Intervention Form-->       
 <div class="tab-content">
 
     
         
-        <div class = "container">
-            <div class="heading-title heading-dotted text-center">
-                <h2 style="color: interventions">Interventions</h2>
-            </div>
+    <div class = "container">
+        <div class="heading-title heading-dotted text-center">
+            <h2 style="color: interventions">Interventions</h2>
         </div>
-    
-<div class = "container">
-    <div class="col-md-12 mx-auto text-center text-interventions offset-md-3">
-        <%=form_with model: @customer, :html => {:id => "myform"} do|form| %>
-	
-             <!-- Selector listing all clients  -->
-                
-            <label class="col-md-12 mx-auto text-center text-interventions offset-md-3 name=intervention[author_id]"> Customer </label>
-            <%= form.select(:customer, Customer.all.collect {|cus| [cus.company_name, cus.id]}, {prompt: "Select"}, {class: 'form-control', required: true}) %>
-
-
-            <div class="display_building">
-            <div class="col-md-12 mx-auto text-center text-interventions offset-md-3"> Select Building</label>
-            </div>
-            </div>
-    
-               <!--  after the Selecting a cusomer, then  this selector list the buildings belonging to this customer -->
-            <label class="col-md-12 mx-auto text-center text-interventions offset-md-3" name="intervention[building_id]"> </label>
-            <%= form.select(:building, Building.all.collect {|buil| [buil.id, buil.customer_id]},  {prompt: "Select Building"}, {class: 'form-control', required: true}) %>
-
-
-
-            <div class="display_battery">
-            <div class="col-md-12 mx-auto text-center text-interventions offset-md-3"> Select Battery</label>
-            </div>
-            </div>
-             
-               <!--  after the Selecting a cusomer, then  the selector list the buildings belonging to this customer then this selector listing the batteries belonging to that building-->
-            <label class="col-md-12 mx-auto text-center text-interventions offset-md-3" name="intervention[battery_id]"> </label>
-
-            <%= form.select(:battery, Battery.all.collect {|bat| [bat.id, bat.building_id]},  {prompt: "Select Battery"}, {class: 'form-control', required: true}) %>   
-
-
-            <div class="display_column">
-            <div class="col-md-12 mx-auto text-center text-interventions offset-md-3"> Select Column</label>
-            </div>
-            </div>
-              <!--  after the Selecting a cusomer, then  the selector list the buildings belonging to this customer has been choosed,then Once the battery selection has been made, this selector list the columns belonging to that battery -->
-        
-            <label class="col-md-12 mx-auto text-center text-interventions offset-md-3" name="intervention[column_id]"> </label>
-            <%= form.select(:column, Column.all.collect {|col| [col.id, col.battery_id]},  {prompt: "Select Column"}, {class: 'form-control'}) %> 
-
-            <div class="display_elevator">
-            <div class="col-md-12 mx-auto text-center text-interventions offset-md-3"> Select Elevator</label>
-            </div>
-            </div>
-            <!--  after the Selecting a cusomer, then  the selector list the buildings belonging to this customer has been choosed,then  the battery selection has been made and selector list the columns belonging to that battery, this selector list the elevators belonging to the column-->
-            <label class="col-md-12 mx-auto text-center text-interventions offset-md-3" name="intervention[elevator_id]"> </label>
-            <%= form.select(:elevator, Elevator.all.collect {|el| [el.id, el.column_id]},  {prompt: "None"}, {class: 'form-control'}) %>    
-
-            <div class="display_employee">
-            <div class="col-md-12 mx-auto text-center text-interventions offset-md-3"> Select Employee</label>
-            </div>
-            </div>
-             <!-- selector that lists all the company's employees -->
-            <label class="col-md-12 mx-auto text-center text-interventions offset-md-3" name="intervention[employee_id]">  </label>
-            <%= form.select(:employee, Employee.all.collect {|empl| ["#{empl.first_name} #{empl.last_name}", empl.id]},  {prompt: "None"}, {class: 'form-control'}) %>  
-             <!-- Description input field whic is linked to the report in the database-->
-
-            <label class="col-md-12 d-flex justify-content-center" for="intervention:report"> Description </label>
-
-            <textarea class="form-control" id="Description" rows="3" name="report"></textarea>
-
-             <!-- submit button to send informations into databse-->
-            <button id="submit-button" type="submit"  class="btn btn-primary" value="Submit" >SUBMIT INTERVENTION </button> 
-          
-            
-        <% end %>
     </div>
-</div>
+    
+    <div class = "container">
+        <div class="col-md-12 mx-auto text-center text-interventions offset-md-3">
+          <%=form_with model: @customer, :html => {:id => "myform"} do|form| %>
+	
+                <!-- Selector listing all clients  -->
+                    
+                <label class="col-md-12 mx-auto text-center text-interventions offset-md-3 name=intervention[author_id]"> Customer </label>
+                   <%= form.select(:customer, Customer.all.collect {|cus| [cus.company_name, cus.id]}, {prompt: "Select"}, {class: 'form-control', required: true}) %>
+
+
+                   <div class="display_building">
+                   <div class="col-md-12 mx-auto text-center text-interventions offset-md-3"> Select Building</label>
+                </div>
+            </div>
+        
+                <!--  after the Selecting a cusomer, then  this selector list the buildings belonging to this customer -->
+                <label class="col-md-12 mx-auto text-center text-interventions offset-md-3" name="intervention[building_id]"> </label>
+                <%= form.select(:building, Building.all.collect {|buil| [buil.id, buil.customer_id]},  {prompt: "Select Building"}, {class: 'form-control', required: true}) %>
+
+
+
+                <div class="display_battery">
+                <div class="col-md-12 mx-auto text-center text-interventions offset-md-3"> Select Battery</label>
+                </div>
+                </div>
+                
+                <!--  after the Selecting a cusomer, then  the selector list the buildings belonging to this customer then this selector listing the batteries belonging to that building-->
+                <label class="col-md-12 mx-auto text-center text-interventions offset-md-3" name="intervention[battery_id]"> </label>
+
+                <%= form.select(:battery, Battery.all.collect {|bat| [bat.id, bat.building_id]},  {prompt: "Select Battery"}, {class: 'form-control', required: true}) %>   
+
+
+                <div class="display_column">
+                <div class="col-md-12 mx-auto text-center text-interventions offset-md-3"> Select Column</label>
+                </div>
+                </div>
+                <!--  after the Selecting a cusomer, then  the selector list the buildings belonging to this customer has been choosed,then Once the battery selection has been made, this selector list the columns belonging to that battery -->
+            
+                <label class="col-md-12 mx-auto text-center text-interventions offset-md-3" name="intervention[column_id]"> </label>
+                <%= form.select(:column, Column.all.collect {|col| [col.id, col.battery_id]},  {prompt: "Select Column"}, {class: 'form-control'}) %> 
+
+                <div class="display_elevator">
+                <div class="col-md-12 mx-auto text-center text-interventions offset-md-3"> Select Elevator</label>
+                </div>
+                </div>
+                <!--  after the Selecting a cusomer, then  the selector list the buildings belonging to this customer has been choosed,then  the battery selection has been made and selector list the columns belonging to that battery, this selector list the elevators belonging to the column-->
+                <label class="col-md-12 mx-auto text-center text-interventions offset-md-3" name="intervention[elevator_id]"> </label>
+                <%= form.select(:elevator, Elevator.all.collect {|el| [el.id, el.column_id]},  {prompt: "None"}, {class: 'form-control'}) %>    
+
+                <div class="display_employee">
+                <div class="col-md-12 mx-auto text-center text-interventions offset-md-3"> Select Employee</label>
+                </div>
+                </div>
+                <!-- selector that lists all the company's employees -->
+                <label class="col-md-12 mx-auto text-center text-interventions offset-md-3" name="intervention[employee_id]">  </label>
+                <%= form.select(:employee, Employee.all.collect {|empl| ["#{empl.first_name} #{empl.last_name}", empl.id]},  {prompt: "None"}, {class: 'form-control'}) %>  
+                <!-- Description input field whic is linked to the report in the database-->
+
+                <label class="col-md-12 d-flex justify-content-center" for="intervention:report"> Description </label>
+
+                <textarea class="form-control" id="Description" rows="3" name="report"></textarea>
+
+                <!-- submit button to send informations into databse-->
+                <button id="submit-button" type="submit"  class="btn btn-primary" value="Submit" >SUBMIT INTERVENTION </button> 
+            
+                
+            <% end %>
+      </div>
+    </div>
 </div>
    
 
@@ -210,26 +219,10 @@
 			</footer>
 			<!-- /FOOTER -->
 		
-		<!-- /WRAPPER -->
+</div><!-- /WRAPPER -->
 
 		<!-- SCROLL TO TOP -->
 		<a href="#" id="toTop"></a>
 
 
-           <script>
-                $("#myform").submit(function(event){
-                    event.preventDefault(); //prevent default action 
-                    var post_url = $(this).attr("action"); //get form action url
-                    var request_method = $(this).attr("method"); //get form GET/POST method
-                    var form_data = $(this).serialize(); //Encode form elements for submission
-
-                    $.ajax({
-                        url : post_url,
-                        type: request_method,
-                        data : form_data
-                    }).done(function(response){ //
-                        alert('intervention successfull saved ');
-                        window.location='/interventions';
-                    });
-                });
-             </script>
+           
