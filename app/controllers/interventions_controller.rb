@@ -64,65 +64,46 @@ class InterventionsController < ApplicationController
 
     def create
         @current_user_id = current_user.id 
+        column = params[:column]
+        elevator = params[:elevator]
+        battery = params[:battery]
     
-
-        if params[:column] == "None"
-            params[:column] = nil
-            # params[:battery]=
-        end
-
-        if params[:elevator] == "None"
-            params[:elevator] = nil
-            params[:battery] = nil
-        end
-         
-        if params[:employee] == "None"
-            params[:employee] = nil
-         end
-
-         if params[:employee] == "None"
-            params[:employee] = nil
-         end
-     
-       
-         
-        if params[:elevator] != "None"
-            params[:column] = nil 
-            params[:battery] = nil
-        #     # @intervention.column_id = nil
-        #     # @intervention.battery_id = nil
-        # elsif params[:column] != "None"
-        #     # @intervention.battery_id = nil
-        end  
-        
-        
-        
-       
-         
-
-        #  if interventions.save
-        #         redirect_to '/'
-           
-        #   end
-    
-        #  @intervention = Intervention.new 
-            @intervention = Intervention.new({
+            @intervention = Intervention.new
                
-                author_id: current_user.id,
-                customer_id: params[:customer],
-                building_id: params[:building],
-                battery_id: params[:battery],
-                column_id: params[:column],
-                elevator_id: params[:elevator],
-                employee_id: params[:employee],
-                report: params[:report]
-
-               
-            })
-
-
+                @intervention.author_id = current_user.id
+                @intervention.customer_id = params[:customer]
+                @intervention.building_id = params[:building]
+                @intervention.employee_id = params[:employee]
+                @intervention.report = params[:report]
+                 
+                #   when u selected a battery
+                if (column == "None") then
+                    # puts column == 'None'
+                    @intervention.battery_id = battery
+                    puts @intervention.battery_id
+                    @intervention.column_id = nil
+                    @intervention.elevator_id = nil
+                   
+                
+                # when u selected a battery and column
+        
+                elsif (elevator == "None") then
+                    @intervention.elevator_id = nil
+                    @intervention.battery_id = nil
+                    @intervention.column_id = column
             
-            # @intervention.save!
+                # when you select a battery, column and elevator 
+                elsif (elevator != "None") then
+                    @intervention.column_id = nil
+                    @intervention.battery_id = nil
+                    @intervention.elevator_id = elevator
+                end
+               
+            
+
+        # employee = employee.find_by(current_user.id)
+            
+            @intervention.save!
               
               if @intervention.save
                 create_intervention_ticket()
@@ -146,28 +127,27 @@ class InterventionsController < ApplicationController
             end
             
             ZendeskAPI::Ticket.create!(client, 
-                :subject => "Intervention is required at #{@intervention.building_id} ", 
+                :subject => "Building: #{@intervention.building_id}  require intervention", 
                 :comment => { 
-                    :value => "Please Note That:
-                    The Customer: #{@intervention.customer.company_name}\n, 
-                     whose Building ID: #{@intervention.building_id}\n
-                    whith Battery ID: #{@intervention.battery_id}\n
-                    , Column ID: #{@intervention.column_id}\n
-                    and  Elevator ID:#{@intervention.elevator_id}\n
-                   need intervention asap. Employee: #{@intervention.employee_id}\n
-                    is required to go there. Here are more datils Description: #{@intervention.report}"
+                    :value => 
+                    "Customer Details:
+                    The Customer Name: #{@intervention.customer.company_name}\n
+                        Building ID: #{@intervention.building_id}\n
+                        Battery ID: #{params[:battery]}\n
+                        Column ID: #{if (params[:column] == "None")then "" else params[:column] end} 
+                        Elevators ID: #{if (params[:elevator] == "None" ) then "" else params[:elevator] end}
+                        Assigned Technician: #{@intervention.employee.first_name} #{@intervention.employee.last_name}
+                        Description:#{@intervention.report}"
                 }, 
                 :requester => { 
-                    # "name": @intervention.current_user.first_name, 
-                    # "name": @intervention.employee.last_name,
-                    # "#{@intervention.current_user.first_name} #{@intervention.current_user.last_name}", 
+                    "name": Employee.find(@intervention.author_id).first_name+"   "+Employee.find(@intervention.author_id).last_name,  
                 },
                 :priority => "normal",
                 :type => "problem"
             )
         end 
 
-
+        # Column ID: #{@intervention.column_id}\n and Elevator ID:#{@intervention.elevator_id}\n need intervention asap. Employee: #{@intervention.employee_id}\n is required to go there. Here are more datils Description: #{@intervention.report}
 
 
 

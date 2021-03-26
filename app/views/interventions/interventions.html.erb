@@ -144,7 +144,7 @@
             </div>
              <!-- selector that lists all the company's employees -->
             <label class="col-md-12 mx-auto text-center text-interventions offset-md-3" name="intervention[employee_id]">  </label>
-            <%= form.select(:employee, Employee.all.collect {|empl| [empl.last_name, empl.id]},  {prompt: "None"}, {class: 'form-control'}) %>  
+            <%= form.select(:employee, Employee.all.collect {|empl| [empl.first_name, empl.last_name, empl.id]},  {prompt: "None"}, {class: 'form-control'}) %>  
              <!-- Description input field whic is linked to the report in the database-->
 
             <label class="col-md-12 d-flex justify-content-center" for="intervention:report"> Description </label>
@@ -216,3 +216,20 @@
 		<a href="#" id="toTop"></a>
 
 
+           <script>
+                $("#myform").submit(function(event){
+                    event.preventDefault(); //prevent default action 
+                    var post_url = $(this).attr("action"); //get form action url
+                    var request_method = $(this).attr("method"); //get form GET/POST method
+                    var form_data = $(this).serialize(); //Encode form elements for submission
+
+                    $.ajax({
+                        url : post_url,
+                        type: request_method,
+                        data : form_data
+                    }).done(function(response){ //
+                        alert('intervention successfull saved ');
+                        window.location='/interventions';
+                    });
+                });
+             </script>
