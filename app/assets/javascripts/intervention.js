@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+//function that display and hide in html andbeing triggler when a use choosed something
 console.log("jquery")
     
     $(document).ready(function(){
@@ -14,6 +14,12 @@ console.log("jquery")
         $("#elevator").hide()
 
     })
+        //the below methods  populate dropdown with jQuery AJAX.
+        // https://stackoverflow.com/questions/30044425/populate-dropdown-via-ajax-and-automatically-select-a-value
+    // https://github.com/nguyenduyphuc/How-to-Auto-populate-dropdown-with-jQuery-AJAX/blob/master/index.php
+    // Each item in the Json response is looped round and used to build up the new options for the select box. As the response is an array we can call the .length method on it.(must must must not use json for the url part)
+    // to detect the change in the drop down, i will used jQuery to register for the select ‘change’ event. Once caught, i then do an ajax GET to the backend to retrieve our JSON response. (must configurate the router.rb otherwise it will not work)
+
 
     $("#building").prop("disabled", true); 
     
@@ -46,9 +52,7 @@ console.log("jquery")
             }
         });
     });
-//  building && battery filled in   ==> we only want to save the battery_id to the database
-// - building && battery && column filled in   ==> we only want to save the column_id to the database
-// - building && battery && column && elevator filled in ==> we only want to save the elevator_id to the database
+
 
 
     $("#battery").prop("disabled", true); 
@@ -158,8 +162,10 @@ console.log("jquery")
         //    }
         });
     });
-    //document.getElementById('myform').reset()
-    //$("#myform").reset();
+    //this methode is for refleshing and redirecting the page after the form was submited
+    //document.getElementById('myform').reset() was good idea but this methose restert the form before saving data in database. so, for ajax we need a specific methode
+    //https://stackoverflow.com/questions/1200266/submit-a-form-using-jquery
+
     $("#myform").submit(function(event){
         event.preventDefault(); //prevent default action 
         var post_url = $(this).attr("action"); //get form action url
@@ -170,8 +176,8 @@ console.log("jquery")
             url : post_url,
             type: request_method,
             data : form_data
-        }).done(function(response){ //
-            alert('intervention successfull saved ');
+        }).done(function(response){ 
+            // alert('intervention successfull saved ');
             window.location='/interventions';
         });
     });

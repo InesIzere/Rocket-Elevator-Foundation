@@ -6,6 +6,7 @@
 <details>
 <summary><i>CLICK TO EXPAND</i></summary>
 
+
 This week converted our static website into a Ruby on Rails application.
 
 The first step was to use the Assett Pipeline to provide the JS, CSS and HTML files needed to run the website. 
@@ -185,6 +186,58 @@ Finally we tried to add **Weather** to *Google Maps* but this is as far as we go
 Then we developed a rake task to generate random data into that table.
 
 ![](fact_int2.jpg)
+
+# Consolidation Week #
+<u><b>This week We created  an intervention table and its REST API</u></b> 
+</br></br>
+<b>Miles Stones for This week are:</b>
+1.	A new form to formulate the request
+2.	The creation of a new table
+3.	Saving the request for intervention in the database
+4.	Sending a service ticket to ZenDesk
+5.	The addition of an API request that returns new interventions requests
+
+ *For The RestAPI repository please [CLICK HERE](https://github.com/InesIzere/Shimwe-RestAPI).
+
+ 1. We have created a Dynamic select dropdown using Rails 5 / AJAX so that selected items can trigger other related to it.
+   Note that to access this page a user must be an employee and a user can see in intervention menu only after signed in and verfied with super_admin authentification
+   ![](1.png)
+   we made sure that when selected a customer,
+    ![](3.jpg) 
+    only building beclong to that customer  can be shown and dropdown comes, 
+    ![](4.PNG)
+when selected a battery belong to selected building only column can be shown,
+    ![](5.PNG)
+wwhen select a column then the elevators can be shown.
+    ![](6.PNG)
+ 
+2. To store  data from the form we have created a table(Interverstion in mysql).
+   ![](2tableintervention.png).
+3. we made sure that we save the last selected only between(battery, columns and elevators)
+    ![](7.PNG)
+    ![](8.PNG)
+    ![](9.PNG)
+    ![](10.jpg)
+
+4. Every Time a form is submited, a ZenDesk is sent but with all selected information despite what will be showed in database.
+![](12.PNG)
+![](13.PNG)
+
+5. For the Api (repository [CLICK HERE](https://github.com/InesIzere/Shimwe-RestAPI)).we have created endpoint for intervetion table.And you can have all the intervention.[url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/).</br>
+ ![](14.PNG)
+   GET for Returns all fields of all Service Request records that do not have a start date and are in "Pending" status.[url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/pending).</br>
+
+![](15.PNG) 
+  PUT for Changing the status of the intervention(example intervention 3) request to "InProgress" and add a start date and time (Timestamp).
+  [url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/StartDate/3).</br>
+  ![](16.PNG) 
+  PUT for Changing the status (example of intervention 1) of the request for action to "Completed" and add an end date and time (Timestamp).[url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/EndDate/1).</br>
+  ![](17.PNG) 
+  For other specification please check my restapi url in postman. https://shimwerestapi.azurewebsites.net/api/interventions
+
+
+
+   
 
 
 

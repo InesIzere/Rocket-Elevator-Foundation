@@ -69,20 +69,20 @@
 
 			<!-- INTRO -->
 			
-			<!-- <div id="home" class="fullwidthbanner" data-delay="0" data-height="600" data-shadow="0" data-navigationStyle="preview2">
-					<ul class="hide">
+				<!--  <div id="home" class="fullwidthbanner" data-delay="0" data-height="600" data-shadow="0" data-navigationStyle="preview2">
+				<ul class="hide">
 						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off"  data-title="Our Values">
 							
 							<img src="/assets/intervention.jpg"  alt="cover image"  data-bgposition="center" data-bgfit="cover" data-bgrepeat="no-repeat">
 						</li>
 					</ul>
-			</div> -->
+			</div>  -->
 			
             <hr class="m-0" /><!-- 1px line separator -->
             
 			<button class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
 				<span class="font-lato fs-30">
-                    <strong>Please Fill Out Intervention Fom</strong>
+                    <strong>Please Fill Out Intervention Form</strong>
 				</span>
 			</button>
             <!-- INTRO -->
@@ -102,7 +102,7 @@
         <div class="col-md-12 mx-auto text-center text-interventions offset-md-3">
           <%=form_with model: @customer, :html => {:id => "myform"} do|form| %>
 	
-                <!-- Selector listing all clients  -->
+                <!-- Selector feching annd listing all clients  -->
                     
                 <label class="col-md-12 mx-auto text-center text-interventions offset-md-3 name=intervention[author_id]"> Customer </label>
                    <%= form.select(:customer, Customer.all.collect {|cus| [cus.company_name, cus.id]}, {prompt: "Select"}, {class: 'form-control', required: true}) %>
