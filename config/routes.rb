@@ -20,9 +20,6 @@ Rails.application.routes.draw do
   get 'dropbox/auth_callback' => 'dropbox#auth_callback'
 
 
-
-  #get 'newintervention' => 'interventions#newintervention'
-
   get 'corporate'  => 'pages#corporate'
   get 'test'  => 'pages#test'
 

@@ -100,11 +100,11 @@ class InterventionsController < ApplicationController
 
         # employee = employee.find_by(current_user.id)
             
-            @intervention.save!
+            # @intervention.save!
             # redirect_back fallback_location: root_path, notice: "Intervention Created"
             if @intervention.save
-                create_intervention_ticket()
-                # redirect_back fallback_location: root_path, notice: "Intervention Created"
+                # create_intervention_ticket()
+                redirect_back fallback_location: root_path, notice: "Intervention Created"
               end
             # #   if @intervention.save
             # #     create_intervention_ticket()
