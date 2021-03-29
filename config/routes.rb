@@ -60,7 +60,7 @@ Rails.application.routes.draw do
   
   resources :geolocations
 
-  
+  get "/(*url)", to: redirect('/404')
 
 end
 
