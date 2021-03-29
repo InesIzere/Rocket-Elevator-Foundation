@@ -1,4 +1,11 @@
 class InterventionsController < ApplicationController
+    before_action :require_login
+    def require_login
+        if !current_user
+          flash[:error] = "You must be logged in to access this section"
+          redirect_to main_app.root_path # halts request cycle
+        end
+      end
     require 'zendesk_api' 
     # check the building that belongs that to a selected customer
     def building
