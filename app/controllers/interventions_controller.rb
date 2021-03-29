@@ -103,7 +103,7 @@ class InterventionsController < ApplicationController
             # @intervention.save!
             # redirect_back fallback_location: root_path, notice: "Intervention Created"
             if @intervention.save
-                # create_intervention_ticket()
+                create_intervention_ticket()
                 redirect_back fallback_location: root_path, notice: "Intervention Created"
               end
             # #   if @intervention.save
