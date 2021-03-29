@@ -188,6 +188,11 @@ Then we developed a rake task to generate random data into that table.
 ![](fact_int2.jpg)
 
 # Consolidation Week #
+
+Use these credentials to access the back office:
+
+Username: nicolas.genest@codeboxx.biz
+Password: newdog1
 <u><b>This week We created  an intervention table and its REST API</u></b> 
 </br></br>
 <b>Miles Stones for This week are:</b>
